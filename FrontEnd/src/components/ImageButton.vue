@@ -1,5 +1,5 @@
 <template>
-    <a :href="url" class="image-button" :style="{ width, height }" @click="handleClick">
+    <a :href="url" class="image-button" :style="{ width, height, borderRadius: borderRadius || '30px'}" @click="handleClick">
       <img :src="imageSrc" :alt="altText" class="image-button__image" />
     </a>
   </template>
@@ -13,6 +13,7 @@
     altText: string;
     width?: string;
     height?: string;
+    borderRadius?: string;
     onClick?: () => void;
   }
   
@@ -31,11 +32,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     transition: box-shadow 0.25s;
-    border-radius: 30px;
   }
   
   .image-button:hover {
