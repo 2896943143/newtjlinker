@@ -1,0 +1,1738 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Activity",
+        "importPath": "lists.models",
+        "description": "lists.models",
+        "isExtraImport": true,
+        "detail": "lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "Class",
+        "importPath": "lists.models",
+        "description": "lists.models",
+        "isExtraImport": true,
+        "detail": "lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "importPath": "lists.models",
+        "description": "lists.models",
+        "isExtraImport": true,
+        "detail": "lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "Class",
+        "importPath": "lists.models",
+        "description": "lists.models",
+        "isExtraImport": true,
+        "detail": "lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "UserActivity",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserMessage",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserActivity",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserAccount",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserAccount",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserInfo",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserImage",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserAccount",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserMessageSerializer",
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "isExtraImport": true,
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserActivitySerializer",
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "isExtraImport": true,
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserImageSerializer",
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "isExtraImport": true,
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "parse_datetime",
+        "importPath": "django.utils.dateparse",
+        "description": "django.utils.dateparse",
+        "isExtraImport": true,
+        "detail": "django.utils.dateparse",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Message_e",
+        "importPath": "accounts.enums",
+        "description": "accounts.enums",
+        "isExtraImport": true,
+        "detail": "accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "Activity_e",
+        "importPath": "accounts.enums",
+        "description": "accounts.enums",
+        "isExtraImport": true,
+        "detail": "accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "M_State_e",
+        "importPath": "accounts.enums",
+        "description": "accounts.enums",
+        "isExtraImport": true,
+        "detail": "accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "reject_message",
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "isExtraImport": true,
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "delete_some",
+        "importPath": "accounts.required",
+        "description": "accounts.required",
+        "isExtraImport": true,
+        "detail": "accounts.required",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Max",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "importPath": "dateutil",
+        "description": "dateutil",
+        "isExtraImport": true,
+        "detail": "dateutil",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "MultiPartParser",
+        "importPath": "rest_framework.parsers",
+        "description": "rest_framework.parsers",
+        "isExtraImport": true,
+        "detail": "rest_framework.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "FormParser",
+        "importPath": "rest_framework.parsers",
+        "description": "rest_framework.parsers",
+        "isExtraImport": true,
+        "detail": "rest_framework.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "staticfiles_urlpatterns",
+        "importPath": "django.contrib.staticfiles.urls",
+        "description": "django.contrib.staticfiles.urls",
+        "isExtraImport": true,
+        "detail": "django.contrib.staticfiles.urls",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.migrations.0001_initial",
+        "description": "BackEnd.TJLinker.accounts.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"AdminAccount\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "BackEnd.TJLinker.accounts.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AccountsConfig",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.apps",
+        "description": "BackEnd.TJLinker.accounts.apps",
+        "peekOfCode": "class AccountsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"accounts\"",
+        "detail": "BackEnd.TJLinker.accounts.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Message_e",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.enums",
+        "description": "BackEnd.TJLinker.accounts.enums",
+        "peekOfCode": "class Message_e:\n    assort = 0\n    private = 1\n    system = 2\nclass Activity_e:\n    Create = 0\n    Join = 1\n    Waite = 2\nclass M_State_e:\n    Unread='Unread'",
+        "detail": "BackEnd.TJLinker.accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "Activity_e",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.enums",
+        "description": "BackEnd.TJLinker.accounts.enums",
+        "peekOfCode": "class Activity_e:\n    Create = 0\n    Join = 1\n    Waite = 2\nclass M_State_e:\n    Unread='Unread'\n    Accept='Accept'\n    Reject='Reject'",
+        "detail": "BackEnd.TJLinker.accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "M_State_e",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.enums",
+        "description": "BackEnd.TJLinker.accounts.enums",
+        "peekOfCode": "class M_State_e:\n    Unread='Unread'\n    Accept='Accept'\n    Reject='Reject'",
+        "detail": "BackEnd.TJLinker.accounts.enums",
+        "documentation": {}
+    },
+    {
+        "label": "UserAccount",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class UserAccount(models.Model):\n    UserID = models.CharField(max_length=128,unique=True, primary_key=True)\n    Password = models.CharField(max_length=128)\n    Answer = models.CharField(max_length=255)\n    SubscribeIDs = models.CharField(max_length=255, default='',null=True,blank=True)\n    def __str__(self):\n        return f\"User {self.UserID}\"\nclass AdminAccount(models.Model):\n    AdminID = models.CharField(max_length=20, unique=True)\n    Password = models.CharField(max_length=128)",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdminAccount",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class AdminAccount(models.Model):\n    AdminID = models.CharField(max_length=20, unique=True)\n    Password = models.CharField(max_length=128)\n    def __str__(self):\n        return f\"Admin {self.AdminID}\"\nclass UserInfo(models.Model):\n    I_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Info')\n    Name = models.CharField(max_length=50)\n    Sex = models.BooleanField(default=0)\n    Tag = models.CharField(max_length=80, default='@,@,@')",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserInfo",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class UserInfo(models.Model):\n    I_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Info')\n    Name = models.CharField(max_length=50)\n    Sex = models.BooleanField(default=0)\n    Tag = models.CharField(max_length=80, default='@,@,@')\n    Info = models.CharField(max_length=500, default='这个人很懒什么都没有写')\n    def __str__(self):\n        return f\"User {self.Name}\"\nclass UserImage(models.Model):\n    M_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Image')",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserImage",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class UserImage(models.Model):\n    M_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Image')\n    M_Image = models.ImageField(upload_to='user_images/', default='user_images/default.png')\n    def __str__(self):\n        return f\"User {self.M_User.UserID}\"\nclass UserActivity(models.Model):\n    A_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Activity')\n    A_CreateActivity = models.CharField(max_length=1000,default='')\n    A_JoinActivity = models.CharField(max_length=1000,default='')\n    A_WaiteActivity = models.CharField(max_length=1000,default='')",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserActivity",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class UserActivity(models.Model):\n    A_User = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Activity')\n    A_CreateActivity = models.CharField(max_length=1000,default='')\n    A_JoinActivity = models.CharField(max_length=1000,default='')\n    A_WaiteActivity = models.CharField(max_length=1000,default='')\n    def __str__(self):\n        return f\"User {self.A_User.UserID}\"\nclass UserMessage(models.Model):\n    E_ID = models.AutoField(primary_key=True)\n    E_Recipient = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Message_Recipient')",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserMessage",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.models",
+        "description": "BackEnd.TJLinker.accounts.models",
+        "peekOfCode": "class UserMessage(models.Model):\n    E_ID = models.AutoField(primary_key=True)\n    E_Recipient = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Message_Recipient')\n    E_Sender = models.ForeignKey(UserAccount, on_delete=models.CASCADE, related_name='Message_Sender')\n    E_Op   = models.IntegerField()\n    E_Content   =   models.CharField(max_length=200)\n    E_State = models.CharField(max_length=20)\n    E_timestamp = models.DateTimeField(default=timezone.now)\n    def __str__(self):\n        return f\"User {self.E_ID}\"",
+        "detail": "BackEnd.TJLinker.accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "delete_some",
+        "kind": 2,
+        "importPath": "BackEnd.TJLinker.accounts.required",
+        "description": "BackEnd.TJLinker.accounts.required",
+        "peekOfCode": "def delete_some(str1,str2):\n    temp=''\n    str1_list=str1.split(',')\n    for now in str1_list:\n        if now != str2 and now != '':\n            temp += now + ','\n    return temp",
+        "detail": "BackEnd.TJLinker.accounts.required",
+        "documentation": {}
+    },
+    {
+        "label": "UserAccountSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.serializers",
+        "description": "BackEnd.TJLinker.accounts.serializers",
+        "peekOfCode": "class UserAccountSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserAccount\n        fields = ['UserID', 'Password', 'Answer', 'SubscribeIDs']\nclass UserInfoSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserInfo\n        fields = ['Name', 'Sex', 'Tag', 'Info']\n    def create(self, validated_data):\n        userinfo = UserInfo.objects.create(I_User=UserAccount.objects.get(UserID=self.context['UserID']), **validated_data)",
+        "detail": "BackEnd.TJLinker.accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserInfoSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.serializers",
+        "description": "BackEnd.TJLinker.accounts.serializers",
+        "peekOfCode": "class UserInfoSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserInfo\n        fields = ['Name', 'Sex', 'Tag', 'Info']\n    def create(self, validated_data):\n        userinfo = UserInfo.objects.create(I_User=UserAccount.objects.get(UserID=self.context['UserID']), **validated_data)\n        return userinfo\nclass UserImageSerializer(serializers.ModelSerializer):\n    M_Image = serializers.ImageField(use_url=True, required=False)\n    class Meta:",
+        "detail": "BackEnd.TJLinker.accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserImageSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.serializers",
+        "description": "BackEnd.TJLinker.accounts.serializers",
+        "peekOfCode": "class UserImageSerializer(serializers.ModelSerializer):\n    M_Image = serializers.ImageField(use_url=True, required=False)\n    class Meta:\n        model = UserImage\n        fields = ['M_Image']\n    def create(self, validated_data):\n        userimage = UserImage.objects.create(M_User=UserAccount.objects.get(UserID=self.context['UserID']), **validated_data)\n        return userimage\nclass UserActivitySerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "BackEnd.TJLinker.accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserActivitySerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.serializers",
+        "description": "BackEnd.TJLinker.accounts.serializers",
+        "peekOfCode": "class UserActivitySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserActivity\n        fields = ['A_CreateActivity','A_JoinActivity','A_WaiteActivity']\n    def create(self, validated_data):\n        useractivity = UserActivity.objects.create(A_User=UserAccount.objects.get(UserID=self.context['UserID']), **validated_data)\n        return useractivity\nclass UserMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserMessage",
+        "detail": "BackEnd.TJLinker.accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserMessageSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.serializers",
+        "description": "BackEnd.TJLinker.accounts.serializers",
+        "peekOfCode": "class UserMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserMessage\n        fields = ['E_Op','E_Content','E_State']\n    def create(self, validated_data):\n        usermessage = UserMessage.objects.create(E_Recipient=UserAccount.objects.get(UserID=self.context['Recipient']),E_Sender=UserAccount.objects.get(UserID=self.context['Sender']), **validated_data)\n        return usermessage",
+        "detail": "BackEnd.TJLinker.accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.accounts.urls",
+        "description": "BackEnd.TJLinker.accounts.urls",
+        "peekOfCode": "urlpatterns = [\n    path('register/', RegisterView.as_view(), name='register'),\n    path('users/info/', UserInfoView.as_view(), name='users_info'),\n    path('users/edit_info/', EditInfoView.as_view(), name='users_edit_info'),\n    path('userlogin/', UserLoginView.as_view(), name='userlogin'),\n    path('find_password_confirm/', FindPasswordConfirmView.as_view(), name='find_password_confirm'),\n    path('find_password_newpass/', FindPasswordNewPassView.as_view(), name='find_password_newpass'),\n    path('admin_login/', AdminLoginView.as_view(), name='admin_login'),\n    path('get_user_create_activity/',GetUserCreateActivityView.as_view(),name='get_user_create_activity'),\n    path('get_user_joined_activity/',GetUserJoinActivityView.as_view(),name='get_user_joined_activity'),",
+        "detail": "BackEnd.TJLinker.accounts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class RegisterView(APIView):\n    def post(self, request):\n        data = request.data\n        user_id = data.get('id')\n        password = data.get('password')\n        ok_password = data.get('okPassword')\n        answer = data.get('answer')\n        # 检查用户ID是否已存在\n        if UserAccount.objects.filter(UserID=user_id).exists():\n            return Response({\"success\": False, \"message\": \"ID已存在\"}, status=status.HTTP_409_CONFLICT)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class UserLoginView(APIView):\n    def post(self, request):\n        data = request.data\n        user_id = data.get('id')\n        password = data.get('password')\n        # 检查用户ID是否存在\n        try:\n            user = UserAccount.objects.get(UserID=user_id)\n        except UserAccount.DoesNotExist:\n            return Response({\"success\": False, \"message\": \"has no such ID\"}, status=status.HTTP_409_CONFLICT)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "FindPasswordConfirmView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class FindPasswordConfirmView(APIView):\n    def post(self, request):\n        data = request.data\n        user_id = data.get('id')\n        answer = data.get('answer')\n        # 检查用户ID是否存在\n        try:\n            user = UserAccount.objects.get(UserID=user_id)\n        except UserAccount.DoesNotExist:\n            return Response({\"success\": False, \"message\": \"has no such ID\"}, status=status.HTTP_400_BAD_REQUEST)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "FindPasswordNewPassView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class FindPasswordNewPassView(APIView):\n    def post(self, request):\n        data = request.data\n        user_id = data.get('id')\n        password = data.get('password')\n        ok_password = data.get('okPassword')\n        # 检查用户ID是否存在\n        try:\n            user = UserAccount.objects.get(UserID=user_id)\n        except UserAccount.DoesNotExist:",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdminLoginView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class AdminLoginView(APIView):\n    def post(self, request):\n        data = request.data\n        admin_id = data.get('id')\n        password = data.get('password')\n        # 检查管理员ID是否存在\n        try:\n            admin = AdminAccount.objects.get(AdminID=admin_id)\n        except AdminAccount.DoesNotExist:\n            return Response({\"success\": False, \"message\": \"Admin ID does not exist\"}, status=status.HTTP_400_BAD_REQUEST)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserInfoView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class UserInfoView(APIView):\n    def get(self, request):\n        try:\n            #print(request.GET.get('id'))\n            usercount = UserAccount.objects.get(UserID=request.GET.get('id'))\n        except UserAccount.DoesNotExist:\n            return Response({ \"code\": 0,\"message\": \"用户ID不存在\"}, status=status.HTTP_404_NOT_FOUND)\n        userinfo = usercount.Info.all().values('Name', 'Tag', 'Info','Sex').first()\n        userinfo[\"code\"]=0\n        str1=userinfo['Tag']",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "EditInfoView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class EditInfoView(APIView):\n    def post(self, request):\n        id=request.POST.get('id')\n        usercount = UserAccount.objects.get(UserID=id)\n        if request.POST.get('name') is not None:\n            usercount.Info.update(Name=request.POST.get('name'))\n        if request.POST.get('sex') is not None:\n            temp=request.POST.get('sex')\n            if temp=='true':\n                usercount.Info.update(Sex=1)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetUserCreateActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class GetUserCreateActivityView(APIView):\n    def get(self, request):\n        user_id=request.GET.get('u_id')\n        index=int(request.GET.get('index'))\n        page_size=int(request.GET.get('page_size'))\n        createactivity=UserAccount.objects.get(UserID=user_id).Activity.first().A_CreateActivity\n        temp=createactivity.split(',')\n        createlist = [s for s in temp if s != \"\"]\n        temp={'num':0,'data':[]}\n        for i in range((index-1)*page_size,index*page_size):",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetUserJoinActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class GetUserJoinActivityView(APIView):\n    def get(self, request):\n        user_id=request.GET.get('u_id')\n        index=int(request.GET.get('index'))\n        page_size=int(request.GET.get('page_size'))\n        joinactivity=UserAccount.objects.get(UserID=user_id).Activity.first().A_JoinActivity\n        temp = joinactivity.split(',')\n        joinlist = [s for s in temp if s != \"\"]\n        temp={'num':0,'data':[]}\n        for i in range((index-1)*page_size,index*page_size):",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetUserGroupMesssageView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class GetUserGroupMesssageView(APIView):\n    def get(self, request):\n        user_id = request.GET.get('u_id')\n        index = int(request.GET.get('index'))\n        page_size = int(request.GET.get('page_size'))\n        groupmessage = UserAccount.objects.get(UserID=user_id).Message_Recipient.filter(E_Op=Message_e.assort).all().order_by('-E_timestamp')\n        l=(index-1)*page_size\n        r=(index)*page_size\n        return_data={'num':0,'data':[]}\n        for now in range(l,r):",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetUserSystemMesssageView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class GetUserSystemMesssageView(APIView):\n    def get(self, request):\n        user_id = request.GET.get('u_id')\n        index = int(request.GET.get('index'))\n        page_size = int(request.GET.get('page_size'))\n        systemmessage = UserAccount.objects.get(UserID=user_id).Message_Recipient.filter(E_Op=Message_e.system).all().order_by('E_timestamp')\n        l=(index-1)*page_size\n        r=(index)*page_size\n        return_data={'num':0,'data':[]}\n        for now in range(l,r):",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "MesssageAcceptView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class MesssageAcceptView(APIView):\n    def post(self, request):\n        m_id = request.data.get('m_id')\n        message=UserMessage.objects.get(E_ID=m_id)\n        message.E_State=M_State_e.Accept\n        message.save()\n        content=message.E_Content\n        parts=content.split(',')\n        activity_one = Activity.objects.get(ActivityID=parts[0])\n        accept_message=UserMessageSerializer(data={'E_Op':Message_e.assort,'E_Content':parts[0]+','+'accept'+','+activity_one.Name,'E_State':M_State_e.Unread},context={'Recipient':message.E_Sender_id,'Sender':message.E_Recipient_id})",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "MesssageRejectView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class MesssageRejectView(APIView):\n    def post(self, request):\n        m_id = request.data.get('m_id')\n        message=UserMessage.objects.get(E_ID=m_id)\n        reject_message(message)\n        return Response({'message':'accept'},status=status.HTTP_200_OK)\nclass LeaveActivity(APIView):\n    def post(self, request):\n        u_id = request.data.get('u_id')\n        a_id = request.data.get('a_id')",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "LeaveActivity",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class LeaveActivity(APIView):\n    def post(self, request):\n        u_id = request.data.get('u_id')\n        a_id = request.data.get('a_id')\n        activity_one=Activity.objects.get(ActivityID=a_id)\n        User= UserAccount.objects.get(UserID=u_id)\n        if(activity_one.CreatorID==User.UserID):\n            return Response({'message':\"creator cant leave\"},status=status.HTTP_400_BAD_REQUEST)\n        activity_one.ParticipantsID=delete_some(activity_one.ParticipantsID,u_id)\n        activity_one.NumCurrent=activity_one.NumCurrent-1",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubscribeCategoryView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class SubscribeCategoryView(APIView):\n    def post(self, request):\n        user_id = request.data.get('user_id')\n        category = request.data.get('category')\n        try:\n            user = UserAccount.objects.get(UserID=user_id)\n        except UserAccount.DoesNotExist:\n            return Response({\n                'success': False,\n                'message': '用户不存在',",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UnsubscribeCategoryView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class UnsubscribeCategoryView(APIView):\n    def post(self, request):\n        user_id = request.data.get('user_id')\n        category = request.data.get('category')\n        try:\n            user = UserAccount.objects.get(UserID=user_id)\n        except UserAccount.DoesNotExist:\n            return Response({\n                'success': False,\n                'message': '用户不存在',",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "SearchSubscribedActivitiesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class SearchSubscribedActivitiesView(APIView):\n    def get(self, request):\n        try:\n            # 获取分页参数\n            page = int(request.query_params.get('page', 1))  # 默认页码为1\n            page_size = int(request.query_params.get('pageSize', 10))\n            user_id = request.query_params.get('user_id')\n            # 计算基于0的索引\n            index = (page - 1) * page_size\n            try:",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "CheckSubscriptionStatusView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class CheckSubscriptionStatusView(APIView):\n    def post(self, request):\n        try:\n            user_id = request.data.get('user_id')\n            category = request.data.get('category')\n            if not user_id or not category:\n                return Response({\n                    'success': False,\n                    'message': 'Missing user_id or category',\n                    'data': \"\"",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetDingYueClassView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class GetDingYueClassView(APIView):\n    def get(self, request):\n        try:\n            user_id = request.query_params.get('user_id')\n            if not user_id:\n                return Response({\n                    'success': False,\n                    'message': 'Missing user_id',\n                    'data': \"\"\n                }, status=status.HTTP_400_BAD_REQUEST)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class DeleteActivityView(APIView):\n    def post(self, request):\n        activity_id = request.data.get('a_id')\n        activity_one = Activity.objects.get(ActivityID=activity_id)\n        paritipants = activity_one.ParticipantsID\n        if paritipants != None:\n            paritipants_list = paritipants.split(',')\n            for paritipant in paritipants_list:\n                if paritipant != '':\n                    user = UserAccount.objects.get(UserID=paritipant)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "MoveSomeoneView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "class MoveSomeoneView(APIView):\n    def delete(self, request):\n        id_list = request.data.get('id')\n        a_id = request.GET.get('activityId')\n        activity_one = Activity.objects.get(ActivityID=a_id)\n        for u_id in id_list:\n            User = UserAccount.objects.get(UserID=u_id)\n            if (activity_one.CreatorID == User.UserID):\n                return Response({'message': \"creator cant leave\"}, status=status.HTTP_400_BAD_REQUEST)\n            activity_one.ParticipantsID = delete_some(activity_one.ParticipantsID, u_id)",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "reject_message",
+        "kind": 2,
+        "importPath": "BackEnd.TJLinker.accounts.views",
+        "description": "BackEnd.TJLinker.accounts.views",
+        "peekOfCode": "def reject_message(message):\n    message.E_State = M_State_e.Reject\n    message.save()\n    content = message.E_Content\n    parts = content.split(',')\n    activity_one=Activity.objects.get(ActivityID=parts[0])\n    reject_message = UserMessageSerializer(\n        data={'E_Op': Message_e.assort, 'E_Content': parts[0] + ',' + 'reject'+','+activity_one.Name, 'E_State': M_State_e.Unread},\n        context={'Recipient': message.E_Sender_id, 'Sender': message.E_Recipient_id})\n    if reject_message.is_valid():",
+        "detail": "BackEnd.TJLinker.accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.management.commands.populate_class_table",
+        "description": "BackEnd.TJLinker.lists.management.commands.populate_class_table",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Class table with data from a JSON file'\n    def handle(self, *args, **kwargs):\n        # 读取文件内容\n        file_path = 'Class.txt'\n        with open(file_path, 'r', encoding='utf-8') as file:\n            data = file.read()\n        # 解析JSON数据\n        options = json.loads(data)\n        # 插入数据到数据库",
+        "detail": "BackEnd.TJLinker.lists.management.commands.populate_class_table",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.migrations.0001_initial",
+        "description": "BackEnd.TJLinker.lists.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Application\",\n            fields=[\n                (\n                    \"ApplyID\",\n                    models.IntegerField(",
+        "detail": "BackEnd.TJLinker.lists.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
+        "description": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"lists\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"activity\",\n            name=\"PosterUrl\",\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
+        "detail": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
+        "documentation": {}
+    },
+    {
+        "label": "ListsConfig",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.apps",
+        "description": "BackEnd.TJLinker.lists.apps",
+        "peekOfCode": "class ListsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"lists\"",
+        "detail": "BackEnd.TJLinker.lists.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Class",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.models",
+        "description": "BackEnd.TJLinker.lists.models",
+        "peekOfCode": "class Class(models.Model):\n    ID = models.AutoField(primary_key=True)\n    First = models.CharField(max_length=255)\n    Second = models.CharField(max_length=255,null=True,blank=True)\n    def __str__(self):\n        return str(self.ID)\n# class Activity(models.Model):\n#     ActivityID = models.AutoField(primary_key=True)\n#     Name = models.CharField(max_length=255)\n#     CreatorID = models.CharField(max_length=255, null=True, blank=True)",
+        "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "Activity",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.models",
+        "description": "BackEnd.TJLinker.lists.models",
+        "peekOfCode": "class Activity(models.Model):\n    ActivityID = models.AutoField(primary_key=True)  # 保持活动ID为整数型\n    Name = models.CharField(max_length=255)\n    CreatorID = models.CharField(max_length=255, null=True, blank=True)\n    ClassID = models.ForeignKey(Class, on_delete=models.CASCADE)\n    CampusID = models.CharField(max_length=255)\n    Location = models.CharField(max_length=255, null=True, blank=True)\n    Description = models.CharField(max_length=255)\n    StartDate = models.DateTimeField(null=True, blank=True)\n    CreateDate = models.DateTimeField(auto_now_add=True)",
+        "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.models",
+        "description": "BackEnd.TJLinker.lists.models",
+        "peekOfCode": "class ChatMessage(models.Model):\n    RoomID = models.CharField(max_length=255)  # 聊天室ID\n    UserID = models.CharField(max_length=255)  # 修改为字符型\n    Message = models.TextField()  # 消息内容\n    AvatarUrl = models.CharField(max_length=255)  # 用户头像URL\n    Timestamp = models.DateTimeField()  # 修改为不自动添加当前时间\n    def __str__(self):\n        return f\"Message from {self.UserID} in Room {self.RoomID}\"\n    def __str__(self):\n        return f\"Message from {self.UserID} in Room {self.RoomID}\"",
+        "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "Application",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.models",
+        "description": "BackEnd.TJLinker.lists.models",
+        "peekOfCode": "class Application(models.Model):\n    # 申请ID，整数类型，必填\n    ApplyID = models.IntegerField(primary_key=True, verbose_name=\"申请ID\")\n    # 活动ID，整数类型，必填\n    ActivityID = models.IntegerField(verbose_name=\"活动ID\")\n    # 申请人ID，整数类型，必填\n    ApplicantID = models.IntegerField(verbose_name=\"申请人ID\")\n    # 状态，布尔类型\n    Status = models.BooleanField(verbose_name=\"状态\")\n    # 时间，字符串类型，必填",
+        "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "PersonalChatMessage",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.models",
+        "description": "BackEnd.TJLinker.lists.models",
+        "peekOfCode": "class PersonalChatMessage(models.Model):\n    SendUserID = models.CharField(max_length=255)\n    ReceiveUserID = models.CharField(max_length=255)\n    Message = models.TextField()\n    Timestamp = models.DateTimeField()\n    def __str__(self):\n        return f\"Message from {self.SendUserID} to {self.ReceiveUserID}\"",
+        "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "ActivitySerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.serializers",
+        "description": "BackEnd.TJLinker.lists.serializers",
+        "peekOfCode": "class ActivitySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Activity\n        fields = '__all__'\nclass ClassSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Class\n        fields = ['First', 'Second']\nclass ActivitySearchSerializer(serializers.ModelSerializer):\n    Class1 = serializers.CharField(source='ClassID.First')",
+        "detail": "BackEnd.TJLinker.lists.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ClassSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.serializers",
+        "description": "BackEnd.TJLinker.lists.serializers",
+        "peekOfCode": "class ClassSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Class\n        fields = ['First', 'Second']\nclass ActivitySearchSerializer(serializers.ModelSerializer):\n    Class1 = serializers.CharField(source='ClassID.First')\n    Class2 = serializers.CharField(source='ClassID.Second')\n    Numnow = serializers.IntegerField(source='NumCurrent')\n    class Meta:\n        model = Activity",
+        "detail": "BackEnd.TJLinker.lists.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ActivitySearchSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.serializers",
+        "description": "BackEnd.TJLinker.lists.serializers",
+        "peekOfCode": "class ActivitySearchSerializer(serializers.ModelSerializer):\n    Class1 = serializers.CharField(source='ClassID.First')\n    Class2 = serializers.CharField(source='ClassID.Second')\n    Numnow = serializers.IntegerField(source='NumCurrent')\n    class Meta:\n        model = Activity\n        fields = ['ActivityID', 'Name', 'Class1', 'Class2', 'Numnow', 'NumLimit', 'DueDate']\nclass ChatMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ChatMessage",
+        "detail": "BackEnd.TJLinker.lists.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessageSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.serializers",
+        "description": "BackEnd.TJLinker.lists.serializers",
+        "peekOfCode": "class ChatMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ChatMessage\n        fields = ['RoomID', 'UserID', 'Message', 'AvatarUrl', 'Timestamp']\nclass PersonalChatMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PersonalChatMessage\n        fields = ['SendUserID', 'ReceiveUserID', 'Message', 'Timestamp']",
+        "detail": "BackEnd.TJLinker.lists.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PersonalChatMessageSerializer",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.serializers",
+        "description": "BackEnd.TJLinker.lists.serializers",
+        "peekOfCode": "class PersonalChatMessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PersonalChatMessage\n        fields = ['SendUserID', 'ReceiveUserID', 'Message', 'Timestamp']",
+        "detail": "BackEnd.TJLinker.lists.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.lists.urls",
+        "description": "BackEnd.TJLinker.lists.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'create_activities', ActivityViewSet, basename='activity')\nrouter.register(r'search_activities', ActivitySearchSet, basename='activity_search')\nurlpatterns = [\n    path('', include(router.urls)),\n    path('get_class/', GetClassView.as_view(), name='get_class'),\n    path('get_actbasic_all/', GetActBasicAllView.as_view(), name='get_actbasic_all'),\n    path('get_actbasic_byclass/<str:classID>/', GetActBasicByClassView.as_view(), name='get_actbasic_byclass'),\n    path('search_activity/<str:word>/', SearchActivityView.as_view(), name='search_activity'),\n    path('get_activity_detail/<str:activityID>/', GetActivityDetailView.as_view(), name='get_activity_detail'),",
+        "detail": "BackEnd.TJLinker.lists.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.lists.urls",
+        "description": "BackEnd.TJLinker.lists.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n    path('get_class/', GetClassView.as_view(), name='get_class'),\n    path('get_actbasic_all/', GetActBasicAllView.as_view(), name='get_actbasic_all'),\n    path('get_actbasic_byclass/<str:classID>/', GetActBasicByClassView.as_view(), name='get_actbasic_byclass'),\n    path('search_activity/<str:word>/', SearchActivityView.as_view(), name='search_activity'),\n    path('get_activity_detail/<str:activityID>/', GetActivityDetailView.as_view(), name='get_activity_detail'),\n    path('get_activities_by_category/', GetActivitiesByCategoryView.as_view(), name='get_activities_by_category'),\n    path('join_activity/', JoinActivityView.as_view(), name='join_activitie'),\n    path('get_activity_state/', GetActivityStateView.as_view(), name='get_activitity_state'),",
+        "detail": "BackEnd.TJLinker.lists.urls",
+        "documentation": {}
+    },
+    {
+        "label": "ActivityViewSet",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class ActivityViewSet(viewsets.ModelViewSet):\n    queryset = Activity.objects.all()\n    serializer_class = ActivitySerializer\n    parser_classes = (MultiPartParser, FormParser)  # 添加对文件上传的支持\n    def create(self, request, *args, **kwargs):\n        data = request.data.copy()\n        poster_file = request.FILES.get('poster')  # 获取上传的海报文件\n        # 处理海报文件\n        if poster_file:\n            # 生成唯一的文件名",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "ActivitySearchSet",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class ActivitySearchSet(viewsets.ModelViewSet):\n    queryset = Activity.objects.all()\n    serializer_class = ActivitySearchSerializer\n    def list(self, request, *args, **kwargs):\n        index = int(request.query_params.get('index'))\n        index = index - 1\n        page_size = int(request.query_params.get('pageSize', 10))\n        activities = Activity.objects.select_related('ClassID').all()\n        # 总活动数\n        total_activities_num = activities.count()",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetClassView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetClassView(APIView):\n    def get(self, request):\n        try:\n            # 获取所有的一级类目\n            first_categories = Class.objects.values('First').distinct()\n            # 构建返回的数据结构\n            data = []\n            for first_category in first_categories:\n                first_name = first_category['First']\n                second_categories = Class.objects.filter(First=first_name).values('Second', 'ID')",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActBasicAllView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActBasicAllView(APIView):\n    def get(self, request):\n        try:\n            # 获取所有活动\n            activities = Activity.objects.all()\n            # 构建返回的数据结构\n            data = []\n            for activity in activities:\n                data.append({\n                    'ActivityID': str(activity.ActivityID),",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActBasicByClassView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActBasicByClassView(APIView):\n    def get(self, request, classID):\n        try:\n            # 尝试将 classID 转换为整数\n            classID = int(classID)\n        except ValueError:\n            return Response({\n                'success': False,\n                'message': 'No such ID',\n                'data': \"\"",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SearchActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SearchActivityView(APIView):\n    def get(self, request, word):\n        try:\n            # 获取分页参数\n            index = int(request.query_params.get('page', 0)) - 1\n            page_size = int(request.query_params.get('pageSize', 10))\n            # 完全匹配的活动\n            exact_match_activities = Activity.objects.filter(Name__iexact=word).order_by('-CreateDate')\n            # 部分匹配的活动\n            partial_match_activities = Activity.objects.filter(Name__icontains=word).exclude(Name__iexact=word).order_by('-CreateDate')",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActivityDetailView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActivityDetailView(APIView):\n    def get(self, request, activityID):\n        try:\n            # 尝试将 activityID 转换为整数\n            activityID = int(activityID)\n        except ValueError:\n            return Response({\n                'success': False,\n                'message': 'not found',\n                'data': \"\"",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActivitiesByCategoryView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActivitiesByCategoryView(APIView):\n    def get(self, request):\n        index = int(request.query_params.get('page', 0)) - 1\n        page_size = int(request.query_params.get('pageSize', 10))\n        category = request.query_params.get('category', '全部')\n        try:\n            if category == '全部':\n                # 返回全部活动中符合页数要求的活动\n                activities = Activity.objects.select_related('ClassID').all()\n            else:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "JoinActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class JoinActivityView(APIView):\n    def post(self, request):\n        user_id=request.data.get('u_id')\n        activity_id=request.data.get('a_id')\n        now_activity = Activity.objects.get(ActivityID=activity_id)\n        if now_activity is None:\n            return Response({\n                'code': 0,\n                'message': 'has no activity'\n            }, status=status.HTTP_404_NOT_FOUND)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActivityStateView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActivityStateView(APIView):\n    def get(self, request):\n        user_id = request.GET.get('u_id')\n        activity_id = request.GET.get('a_id')\n        temp = UserActivity.objects.get(A_User_id=user_id)\n        joined_activity= temp.A_JoinActivity\n        created_activity=temp.A_CreateActivity\n        wait_activity=temp.A_WaiteActivity\n        joined_list=set()\n        created_list = set()",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "BreakeActivityView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class BreakeActivityView(APIView):\n    def post(self, request):\n        activity_id = request.data.get('a_id')\n        activity_one = Activity.objects.get(ActivityID=activity_id)\n        paritipants=activity_one.ParticipantsID\n        if paritipants !=None:\n            paritipants_list=paritipants.split(',')\n            for paritipant in paritipants_list:\n                if paritipant != '' :\n                    user=UserAccount.objects.get(UserID=paritipant)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetChatMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetChatMessagesView(APIView):\n    def get(self, request):\n        activity_id = request.query_params.get('ActivityId')\n        page = int(request.query_params.get('page', 1))\n        initial_timestamp = request.query_params.get('initialTimestamp')\n        if not activity_id or not initial_timestamp:\n            return Response({\"error\": \"Activity ID and Initial Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        if not initial_timestamp:\n            return Response({\"error\": \"Initial Timestamp cannot be empty\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SendMessageView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SendMessageView(APIView):\n    def post(self, request):\n        activity_id = request.data.get('ActivityId')\n        user_id = request.data.get('UserID')\n        message = request.data.get('Message')\n        avatar_url = request.data.get('AvatarUrl')\n        timestamp = request.data.get('Timestamp')\n        if not activity_id or not user_id or not message or not avatar_url or not timestamp:\n            return Response({\"error\": \"Activity ID, User ID, Message, AvatarUrl, and Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SearchAndFilterActivitiesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SearchAndFilterActivitiesView(APIView):\n    def get(self, request):\n        # 获取搜索关键词\n        word = request.query_params.get('word', '')\n        # 获取分页参数\n        index = int(request.query_params.get('page', 0)) - 1\n        page_size = int(request.query_params.get('pageSize', 10))\n        # 获取类别参数\n        category = request.query_params.get('category', '全部')\n        try:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SearchAndFilterDingYueActivitiesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SearchAndFilterDingYueActivitiesView(APIView):\n    def get(self, request):\n        # 获取搜索关键词\n        word = request.query_params.get('word', '')\n        # 获取分页参数\n        index = int(request.query_params.get('page', 0)) - 1\n        page_size = int(request.query_params.get('pageSize', 10))\n        # 获取类别参数\n        category = request.query_params.get('category', '全部')\n        # 获取用户ID",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetActivityParticipantView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetActivityParticipantView(APIView):\n    def get(self, request):\n        activityId=request.GET.get('activityId')\n        activity_now=Activity.objects.get(ActivityID=activityId)\n        participant_list=activity_now.ParticipantsID.split(',')\n        member=[]\n        for participant in participant_list:\n            if participant != '':\n                temp={}\n                user_now=UserAccount.objects.get(UserID=participant)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetLastMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetLastMessagesView(APIView):\n    def get(self, request):\n        user_id = request.GET.get('u_id')\n        page = int(request.GET.get('page', 1))\n        page_size = int(request.GET.get('page_size', 10))\n        if not user_id:\n            return Response({\"error\": \"User ID is required\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:\n            # 查找与传入的用户ID聊过天的所有用户ID\n            chat_partners = PersonalChatMessage.objects.filter(",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteTeamView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class DeleteTeamView(APIView):\n    def delete(self, request):\n        activity_id = request.data.get('ActivityID')\n        if not activity_id:\n            return Response({'error': 'ActivityID is required'}, status=status.HTTP_400_BAD_REQUEST)\n        # 获取活动对象\n        activity = get_object_or_404(Activity, ActivityID=activity_id)\n        # 获取对应的 ChatMessage 对象\n        chat_message = None\n        if activity.RoomID:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SendPersonalMessageView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SendPersonalMessageView(APIView):\n    def post(self, request):\n        message = request.data.get('Message')\n        send_user_id = request.data.get('SendUserID')\n        receive_user_id = request.data.get('ReceiveUserID')\n        timestamp = request.data.get('Timestamp')\n        if not message or not send_user_id or not receive_user_id or not timestamp:\n            return Response({\"error\": \"Message, SendUserID, ReceiveUserID, and Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:\n            # 将前端发来的时间戳转换为 datetime 对象",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetPersonalChatMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetPersonalChatMessagesView(APIView):\n    def get(self, request):\n        send_user_id = request.query_params.get('SendUserID')\n        receive_user_id = request.query_params.get('ReceiveUserID')\n        initial_timestamp = request.query_params.get('initialTimestamp')\n        page = int(request.query_params.get('page', 1))\n        if not send_user_id or not receive_user_id or not initial_timestamp:\n            return Response({\"error\": \"SendUserID, ReceiveUserID, and Initial Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        if not initial_timestamp:\n            return Response({\"error\": \"Initial Timestamp cannot be empty\"}, status=status.HTTP_400_BAD_REQUEST)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetLatestPersonalMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetLatestPersonalMessagesView(APIView):\n    def get(self, request):\n        send_user_id = request.query_params.get('SendUserID')\n        receive_user_id = request.query_params.get('ReceiveUserID')\n        current_timestamp = request.query_params.get('currentTimestamp')\n        if not send_user_id or not receive_user_id or not current_timestamp:\n            return Response({\"error\": \"SendUserID, ReceiveUserID, and Current Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:\n            current_timestamp = parse_datetime(current_timestamp)\n        except ValueError:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetChatMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetChatMessagesView(APIView):\n    def get(self, request):\n        activity_id = request.query_params.get('ActivityId')\n        page = int(request.query_params.get('page', 1))\n        initial_timestamp = request.query_params.get('initialTimestamp')\n        if not activity_id or not initial_timestamp:\n            return Response({\"error\": \"Activity ID and Initial Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        if not initial_timestamp:\n            return Response({\"error\": \"Initial Timestamp cannot be empty\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetLatestMessagesView",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class GetLatestMessagesView(APIView):\n    def get(self, request):\n        activity_id = request.query_params.get('ActivityId')\n        current_timestamp = request.query_params.get('currentTimestamp')\n        if not activity_id or not current_timestamp:\n            return Response({\"error\": \"Activity ID and Current Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        try:\n            current_timestamp = parse_datetime(current_timestamp)\n        except ValueError:\n            return Response({\"error\": \"Invalid Current Timestamp format\"}, status=status.HTTP_400_BAD_REQUEST)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.asgi",
+        "description": "BackEnd.TJLinker.TJLinker.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "BackEnd.TJLinker.TJLinker.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",\n    \"lists\",\n    \"corsheaders\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "ROOT_URLCONF = \"TJLinker.urls\"\nCORS_ALLOW_ALL_ORIGINS = True  # 允许所有来源的跨域请求\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_ALL_ORIGINS",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True  # 允许所有来源的跨域请求\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "WSGI_APPLICATION = \"TJLinker.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'tjlinker',  # 你的数据库名称\n        'USER': 'root',  # 你的数据库用户名\n        'PASSWORD': '123456',  # 你的数据库密码\n        'HOST': 'localhost',  # 数据库主机地址",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'tjlinker',  # 你的数据库名称\n        'USER': 'root',  # 你的数据库用户名\n        'PASSWORD': '123456',  # 你的数据库密码\n        'HOST': 'localhost',  # 数据库主机地址\n        'PORT': '3306',  # 数据库端口\n    }\n}",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.urls",
+        "description": "BackEnd.TJLinker.TJLinker.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include('accounts.urls')),\n    path('api/', include('lists.urls')),\n]\nurlpatterns += staticfiles_urlpatterns()\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "BackEnd.TJLinker.TJLinker.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.wsgi",
+        "description": "BackEnd.TJLinker.TJLinker.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "BackEnd.TJLinker.TJLinker.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "BackEnd.TJLinker.manage",
+        "description": "BackEnd.TJLinker.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"TJLinker.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "BackEnd.TJLinker.manage",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "FrontEnd.node_modules.flatted.python.flatted",
+        "description": "FrontEnd.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "FrontEnd.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "FrontEnd.node_modules.flatted.python.flatted",
+        "description": "FrontEnd.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "FrontEnd.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "FrontEnd.node_modules.flatted.python.flatted",
+        "description": "FrontEnd.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "FrontEnd.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "FrontEnd.node_modules.flatted.python.flatted",
+        "description": "FrontEnd.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "FrontEnd.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "FrontEnd.node_modules.flatted.python.test",
+        "description": "FrontEnd.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "FrontEnd.node_modules.flatted.python.test",
+        "documentation": {}
+    }
+]
