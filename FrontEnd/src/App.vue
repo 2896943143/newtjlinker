@@ -17,8 +17,7 @@ const isPhotoBackPage = computed(() => route.path === '/register'
 || route.path === '/find-password'
 || route.path === '/create-activity'
 || route.path === '/edituserinfo'
-|| route.path === '/person'
-|| route.path === '/detail-activity');
+|| route.path === '/person');
 </script>
 
 <style scoped>

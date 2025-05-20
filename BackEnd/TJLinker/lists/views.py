@@ -794,6 +794,7 @@ class SearchAndFilterActivitiesView(APIView):
                     'Num': f"{activity.NumCurrent}/{activity.NumLimit}",
                     'ActivityID': str(activity.ActivityID),
                     'DueDate': activity.DueDate.strftime('%Y-%m-%d %H:%M:%S'),
+                    'PosterUrl': activity.PosterUrl  # 添加海报URL字段
                 })
 
             if not data:
@@ -907,6 +908,7 @@ class SearchAndFilterDingYueActivitiesView(APIView):
                     'Num': f"{activity.NumCurrent}/{activity.NumLimit}",
                     'ActivityID': str(activity.ActivityID),
                     'DueDate': activity.DueDate.strftime('%Y-%m-%d %H:%M:%S'),
+                    'PosterUrl': activity.PosterUrl  # 添加海报URL字段
                 })
 
             if not data:

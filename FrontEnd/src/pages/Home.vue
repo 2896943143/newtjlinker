@@ -321,4 +321,17 @@ watch([() => selectedCategory.value.first, () => selectedCategory.value.second],
   border-radius: 10px;
 
 }
+
+.page-left {
+  position: fixed;
+  top: 115px;
+  left: 0;
+  width: 150px;
+  height: 900px;
+  /* 渐变背景：从浅蓝 (#87CEEB) 到更浅的蓝 (#E0FFFF) */
+  background-image: linear-gradient(to right, #a1e4ff, #e5f5f8);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
 </style>
