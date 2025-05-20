@@ -26,40 +26,13 @@ from django.db.models import Q
 from django.db.models import Max
 from dateutil import parser
 
-import os
-from django.conf import settings
-from rest_framework.parsers import MultiPartParser, FormParser
-
 
 class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
-    parser_classes = (MultiPartParser, FormParser)  # 添加对文件上传的支持
-
 
     def create(self, request, *args, **kwargs):
-        data = request.data.copy()
-        poster_file = request.FILES.get('poster')  # 获取上传的海报文件
-        
-        # 处理海报文件
-        if poster_file:
-            # 生成唯一的文件名
-            timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-            file_ext = os.path.splitext(poster_file.name)[1]
-            filename = f"poster_{timestamp}{file_ext}"
-            
-            # 保存文件到media/posters目录
-            save_path = os.path.join(settings.MEDIA_ROOT, 'posters', filename)
-            os.makedirs(os.path.dirname(save_path), exist_ok=True)
-            
-            with open(save_path, 'wb+') as destination:
-                for chunk in poster_file.chunks():
-                    destination.write(chunk)
-            
-            # 设置海报URL
-            data['PosterUrl'] = os.path.join('posters', filename).replace('\\', '/')
-            
-            
+        data = request.data
         # print(data)
 
         Name = data.get('Name')
@@ -112,13 +85,7 @@ class ActivityViewSet(viewsets.ModelViewSet):
                 {"message": "Class record not found", "errors": {"ClassID": "Class record not found"}},
                 status=status.HTTP_400_BAD_REQUEST
             )
-            
-        from urllib.parse import urljoin
-        PosterUrl = urljoin(
-            'http://127.0.0.1:8000/',  # 注意末尾要有 `/`
-            urljoin(settings.MEDIA_URL, data['PosterUrl'])
-        )
-        print(PosterUrl)
+
         user_data = {
             'Name': Name,
             'CreatorID': CreatorID,
@@ -129,8 +96,7 @@ class ActivityViewSet(viewsets.ModelViewSet):
             'StartDate': StartDate,
             'DueDate': DueDate,
             'NeedRealName': NeedRealName,
-            'NumLimit': NumLimit,
-            'PosterUrl': PosterUrl  # 添加海报URL
+            'NumLimit': NumLimit
         }
         serializer = self.get_serializer(data=user_data)
         if serializer.is_valid():
@@ -412,8 +378,7 @@ class GetActivityDetailView(APIView):
                 'NumCurrent': str(activity.NumCurrent),
                 'Description': activity.Description,
                 'Participants': participants,
-                'CreatorID': activity.CreatorID,
-                'PosterUrl':activity.PosterUrl
+                'CreatorID': activity.CreatorID
             }
 
             return Response({
@@ -794,7 +759,6 @@ class SearchAndFilterActivitiesView(APIView):
                     'Num': f"{activity.NumCurrent}/{activity.NumLimit}",
                     'ActivityID': str(activity.ActivityID),
                     'DueDate': activity.DueDate.strftime('%Y-%m-%d %H:%M:%S'),
-                    'PosterUrl': activity.PosterUrl  # 添加海报URL字段
                 })
 
             if not data:
@@ -908,7 +872,6 @@ class SearchAndFilterDingYueActivitiesView(APIView):
                     'Num': f"{activity.NumCurrent}/{activity.NumLimit}",
                     'ActivityID': str(activity.ActivityID),
                     'DueDate': activity.DueDate.strftime('%Y-%m-%d %H:%M:%S'),
-                    'PosterUrl': activity.PosterUrl  # 添加海报URL字段
                 })
 
             if not data:

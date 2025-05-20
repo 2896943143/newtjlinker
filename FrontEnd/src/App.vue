@@ -40,7 +40,6 @@ const isPhotoBackPage = computed(() => route.path === '/register'
   box-sizing: border-box;
   margin: auto 0;
 }
-
 .photo-background {
   background-image: url('/Logos/background.jpg'); /* 设置背景图片 */
   background-size: cover; /* 使背景图片覆盖整个区域 */
@@ -49,5 +48,6 @@ const isPhotoBackPage = computed(() => route.path === '/register'
   background-color: rgba(174, 206, 238, 0.613);
   /* background-color: rgba(238, 174, 202, 0.5186668417366946); 备用背景颜色 */
   background-blend-mode: multiply; /* 混合模式，使背景颜色与图片混合 */
-}
+  min-height: 130vh;
+} 
 </style>

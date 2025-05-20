@@ -2,7 +2,7 @@
   "name": "TJLinker",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"node proxy.js\"",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
@@ -27,6 +27,7 @@
     "@types/node": "^20.14.10",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-typescript": "^13.0.0",
+    "concurrently": "^9.1.2",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -42,6 +43,6 @@
     "vite": "^5.3.3",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-router": "^4.4.0",
-    "vue-tsc": "^2.0.26"
+    "vue-tsc": "^2.2.10"
   }
 }
