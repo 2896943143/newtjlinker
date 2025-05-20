@@ -745,6 +745,7 @@ async function fetchChats() {
   } catch (e) {
     console.error('加载聊天列表失败', e)
   }
+  console.log(chats.value)
 }
 
 // 选择聊天，加载历史消息
@@ -885,9 +886,12 @@ async function postDone(){
   const person=localStorage.getItem("another_person")
   if (person) {
     const chat = chats.value.find(c => c.id === person)
-    if(!chat){
+    console.log('组件挂载时变量值:', person)
+    console.log('组件挂载时变量值:',chats.value)
+    if(chat === undefined){
       const userId = person; // 替换为你要查询的用户ID
       const url = `http://127.0.0.1:8000/api/users/info?id=${userId}`; // 将userId放在URL查询字符串中
+
       try {
         const response = await fetch(url, {
           method: 'GET',
@@ -909,8 +913,8 @@ async function postDone(){
 
 onMounted(() => {
   fetchChats()
-  initWebSocket()
-  postDone()
+    .then(() => initWebSocket())
+    .then(() => postDone())
 })
 
 onBeforeUnmount(() => {

@@ -103,7 +103,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tjlinker',  # 你的数据库名称
         'USER': 'root',  # 你的数据库用户名
-        'PASSWORD': '204519',  # 你的数据库密码
+        'PASSWORD': '123456',  # 你的数据库密码
         'HOST': 'localhost',  # 数据库主机地址
         'PORT': '3306',  # 数据库端口
     }

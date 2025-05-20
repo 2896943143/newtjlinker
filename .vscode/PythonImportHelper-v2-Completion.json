@@ -40,22 +40,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -119,6 +103,14 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
         "documentation": {}
     },
     {
@@ -218,7 +210,23 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "re_path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -356,6 +364,22 @@
         "documentation": {}
     },
     {
+        "label": "get_channel_layer",
+        "importPath": "channels.layers",
+        "description": "channels.layers",
+        "isExtraImport": true,
+        "detail": "channels.layers",
+        "documentation": {}
+    },
+    {
+        "label": "async_to_sync",
+        "importPath": "asgiref.sync",
+        "description": "asgiref.sync",
+        "isExtraImport": true,
+        "detail": "asgiref.sync",
+        "documentation": {}
+    },
+    {
         "label": "UserActivity",
         "importPath": "accounts.models",
         "description": "accounts.models",
@@ -441,6 +465,14 @@
         "description": "accounts.serializers",
         "isExtraImport": true,
         "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncWebsocketConsumer",
+        "importPath": "channels.generic.websocket",
+        "description": "channels.generic.websocket",
+        "isExtraImport": true,
+        "detail": "channels.generic.websocket",
         "documentation": {}
     },
     {
@@ -573,11 +605,53 @@
         "documentation": {}
     },
     {
+        "label": "ProtocolTypeRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "URLRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "django",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django",
+        "description": "django",
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "AuthMiddlewareStack",
+        "importPath": "channels.auth",
+        "description": "channels.auth",
+        "isExtraImport": true,
+        "detail": "channels.auth",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
         "isExtraImport": true,
         "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "lists.routing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "lists.routing",
+        "description": "lists.routing",
+        "detail": "lists.routing",
         "documentation": {}
     },
     {
@@ -1016,15 +1090,6 @@
         "documentation": {}
     },
     {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
-        "description": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"lists\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"activity\",\n            name=\"PosterUrl\",\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
-        "detail": "BackEnd.TJLinker.lists.migrations.0002_activity_posterurl",
-        "documentation": {}
-    },
-    {
         "label": "ListsConfig",
         "kind": 6,
         "importPath": "BackEnd.TJLinker.lists.apps",
@@ -1076,6 +1141,15 @@
         "description": "BackEnd.TJLinker.lists.models",
         "peekOfCode": "class PersonalChatMessage(models.Model):\n    SendUserID = models.CharField(max_length=255)\n    ReceiveUserID = models.CharField(max_length=255)\n    Message = models.TextField()\n    Timestamp = models.DateTimeField()\n    def __str__(self):\n        return f\"Message from {self.SendUserID} to {self.ReceiveUserID}\"",
         "detail": "BackEnd.TJLinker.lists.models",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.lists.routing",
+        "description": "BackEnd.TJLinker.lists.routing",
+        "peekOfCode": "websocket_urlpatterns = [\n    path(\"api/ws/\", SendDateMessage.as_asgi()),\n]",
+        "detail": "BackEnd.TJLinker.lists.routing",
         "documentation": {}
     },
     {
@@ -1349,11 +1423,65 @@
         "documentation": {}
     },
     {
+        "label": "NewGetChatList",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class NewGetChatList(APIView):\n    def get(self, request):\n        myId = request.GET.get('userId')\n        #私有聊天\n        messages = PersonalChatMessage.objects.filter(\n            Q(SendUserID=myId) | Q(ReceiveUserID=myId)\n        ).order_by('-Timestamp')\n        chat_dict = {}\n        seen_partners = set()\n        for msg in messages:",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoadMessagePerson",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class LoadMessagePerson(APIView):\n    def get(self, request):\n        user_id = request.GET.get('userId')\n        other_id = request.GET.get('otherId')\n        # 查询两个用户之间所有互发消息\n        messages = PersonalChatMessage.objects.filter(\n            Q(SendUserID=user_id, ReceiveUserID=other_id) |\n            Q(SendUserID=other_id, ReceiveUserID=user_id)\n        ).order_by('Timestamp')\n        user = get_object_or_404(UserAccount, UserID=user_id)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoadMessageGroup",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class LoadMessageGroup(APIView):\n    def get(self, request):\n        room_id = request.GET.get('roomId')\n        qs = ChatMessage.objects.filter(RoomID=room_id).order_by('Timestamp')\n        data = []\n        for msg in qs:\n            sender_id = msg.UserID\n            # 如果你有 User 模型并且 UserID 对应 User.pk，可以这样获取昵称：\n            sendUser = get_object_or_404(UserAccount, UserID=sender_id)\n            info = UserInfo.objects.get(I_User=sendUser)",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SendMessageViewPerson",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SendMessageViewPerson(APIView):\n    def post(self, request):\n        message = request.data.get('message')\n        send_user_id = request.data.get('sendUserId')\n        receive_user_id = request.data.get('receiveUserId')\n        timestamp = timezone.now()\n        if not message or not send_user_id or not receive_user_id or not timestamp:\n            return Response({\"error\": \"Message, SendUserID, ReceiveUserID, and Timestamp are required\"}, status=status.HTTP_400_BAD_REQUEST)\n        # 创建私聊消息对象\n        personal_chat_message = PersonalChatMessage(",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SendMessageGroup",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SendMessageGroup(APIView):\n    def post(self, request):\n        room_id = request.data.get('roomId')\n        user_id = request.data.get('userID')\n        message = request.data.get('message')\n        timestamp = timezone.now()\n        user = get_object_or_404(UserAccount, UserID=user_id)\n        # 获取用户头像，如果不存在就返回默认图\n        user_image_user = UserImage.objects.filter(M_User=user).first()\n        image_url_user = user_image_user.M_Image.url",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
+        "label": "SendDateMessage",
+        "kind": 6,
+        "importPath": "BackEnd.TJLinker.lists.views",
+        "description": "BackEnd.TJLinker.lists.views",
+        "peekOfCode": "class SendDateMessage(AsyncWebsocketConsumer):\n    async def connect(self):\n        await self.channel_layer.group_add(\"chat\", self.channel_name)\n        await self.accept()\n    async def disconnect(self, close_code):\n        await self.channel_layer.group_discard(\"chat\", self.channel_name)\n    async def send_new_message(self, event):\n        event=event['message']\n        await self.send(text_data=json.dumps({'message': event['message'],'from1':event['from1'],'to1':event['to1'],'avatar_url':event['avatar_url'],'time1': event['time1'],'name':event['name'],'chatid':event['chatId']}))",
+        "detail": "BackEnd.TJLinker.lists.views",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "BackEnd.TJLinker.TJLinker.asgi",
         "description": "BackEnd.TJLinker.TJLinker.asgi",
-        "peekOfCode": "application = get_asgi_application()",
+        "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": get_asgi_application(),\n    \"websocket\": AuthMiddlewareStack(\n        URLRouter(\n            lists.routing.websocket_urlpatterns\n        )\n    ),\n})",
         "detail": "BackEnd.TJLinker.TJLinker.asgi",
         "documentation": {}
     },
@@ -1389,7 +1517,7 @@
         "kind": 5,
         "importPath": "BackEnd.TJLinker.TJLinker.settings",
         "description": "BackEnd.TJLinker.TJLinker.settings",
-        "peekOfCode": "SECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-#j^i2vbt%j_8e^#oqk*o8s(to%ko%(*is7&2e64i%xj@tl2@$c\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"daphne\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "BackEnd.TJLinker.TJLinker.settings",
         "documentation": {}
     },
@@ -1398,7 +1526,7 @@
         "kind": 5,
         "importPath": "BackEnd.TJLinker.TJLinker.settings",
         "description": "BackEnd.TJLinker.TJLinker.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"daphne\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "BackEnd.TJLinker.TJLinker.settings",
         "documentation": {}
     },
@@ -1407,7 +1535,7 @@
         "kind": 5,
         "importPath": "BackEnd.TJLinker.TJLinker.settings",
         "description": "BackEnd.TJLinker.TJLinker.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"daphne\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "BackEnd.TJLinker.TJLinker.settings",
         "documentation": {}
     },
@@ -1416,7 +1544,25 @@
         "kind": 5,
         "importPath": "BackEnd.TJLinker.TJLinker.settings",
         "description": "BackEnd.TJLinker.TJLinker.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",\n    \"lists\",\n    \"corsheaders\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"daphne\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"accounts\",\n    \"lists\",",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_LAYERS",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels.layers.InMemoryChannelLayer\",  # 简单版本，开发测试用\n        # 推荐生产环境用 Redis：\n        # \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        # \"CONFIG\": {\"hosts\": [(\"127.0.0.1\", 6379)]},\n    },\n}\n# 指定使用 channels 作为 ASGI 应用入口\nASGI_APPLICATION = 'TJLinker.asgi.application'",
+        "detail": "BackEnd.TJLinker.TJLinker.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ASGI_APPLICATION",
+        "kind": 5,
+        "importPath": "BackEnd.TJLinker.TJLinker.settings",
+        "description": "BackEnd.TJLinker.TJLinker.settings",
+        "peekOfCode": "ASGI_APPLICATION = 'TJLinker.asgi.application'\nMIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",",
         "detail": "BackEnd.TJLinker.TJLinker.settings",
         "documentation": {}
     },
