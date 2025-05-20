@@ -1,16 +1,18 @@
 <template>
   <div class="centered-container">
-    <!-- 头部保持不变 -->
+    <!-- <TopNavBarWithoutSearch :avatar="user.avatarUrl" :nickname="user.username" :userId="user.id" /> -->
+    <!-- <TopNavBarWithoutSearch :avatar="user.avatarUrl" :nickname="user.username" :userId="user.id" /> -->
+
     <el-page-header :icon="ArrowLeft" class="header" @back="goBack">
       <template #content>
         <span class="text"> 活动创建 </span>
       </template>
     </el-page-header>
-    
     <div class="large-radius">
       <div class="page-container">
         <el-form
           ref="ruleFormRef"
+          style="max-width: 1700px"
           :model="ruleForm"
           :rules="rules"
           label-width="auto"
@@ -19,132 +21,105 @@
           status-icon
           :label-position="labelPosition"
         >
-          <!-- 第一行：基本信息 -->
-          <el-form-item label="活动名称" prop="Name" class="form-item full-width">
-            <div class="form-item-with-icon">
-              <el-icon><Document /></el-icon>
-              <el-input v-model="ruleForm.Name" />
-            </div>
+          <el-form-item label="活动名称" prop="Name">
+            <el-input v-model="ruleForm.Name" />
           </el-form-item>
 
-              <el-form-item label="活动所在校区" prop="RegionKind" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><Location /></el-icon>
-                  <el-select v-model="ruleForm.RegionKind" placeholder="Select">
-                    <el-option label="四平路校区" value="四平路校区" />
-                    <el-option label="嘉定校区" value="嘉定校区" />
-                    <el-option label="沪西校区" value="沪西校区" />
-                    <el-option label="沪北校区" value="沪北校区" />
-                    <el-option label="校外" value="校外" />
-                  </el-select>
-                </div>
+          <el-form-item label="活动所在校区" prop="RegionKind">
+            <el-select v-model="ruleForm.RegionKind">
+              <el-option label="四平路校区" value="四平路校区" />
+              <el-option label="嘉定校区" value="嘉定校区" />
+              <el-option label="沪西校区" value="沪西校区" />
+              <el-option label="沪北校区" value="沪北校区" />
+              <el-option label="校外" value="校外" />
+            </el-select>
+          </el-form-item>
+
+          <el-form-item label="活动详细地点" prop="RegionDetailed">
+            <el-input v-model="ruleForm.RegionDetailed" />
+          </el-form-item>
+
+          <el-form-item label="活动所属类目" prop="Kind">
+            <el-cascader v-model="ruleForm.Kind" :options="Options" clearable />
+          </el-form-item>
+
+          <el-form-item label="活动时间" required="True">
+            <el-col :span="11">
+              <el-form-item prop="Date1">
+                <el-date-picker v-model="ruleForm.Date1" style="width: 100%" />
               </el-form-item>
-
-              <el-form-item label="活动详细地点" prop="RegionDetailed" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><MapLocation /></el-icon>
-                  <el-input v-model="ruleForm.RegionDetailed" />
-                </div>
+            </el-col>
+            <el-col class="text-center" :span="2">
+              <span class="text-gray-500">-</span>
+            </el-col>
+            <el-col :span="11">
+              <el-form-item prop="Time1">
+                <el-time-picker v-model="ruleForm.Time1" style="width: 100%" />
               </el-form-item>
+            </el-col>
+          </el-form-item>
 
-              <el-form-item label="活动所属类目" prop="Kind" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><Folder /></el-icon>
-                  <el-cascader v-model="ruleForm.Kind" :options="Options" placeholder="Select" clearable />
-                </div>
+          <el-form-item label="报名截止时间" required="True">
+            <el-col :span="11">
+              <el-form-item prop="Date2">
+                <el-date-picker v-model="ruleForm.Date2" style="width: 100%" />
               </el-form-item>
-
-              <el-form-item label="活动时间" required="True" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><Clock /></el-icon>
-                  <div class="time-picker-group">
-                    <el-date-picker v-model="ruleForm.Date1" />
-                    <span class="time-separator">-</span>
-                    <el-time-picker v-model="ruleForm.Time1" />
-                  </div>
-                </div>
+            </el-col>
+            <el-col class="text-center" :span="2">
+              <span class="text-gray-500">-</span>
+            </el-col>
+            <el-col :span="11">
+              <el-form-item prop="Time2">
+                <el-time-picker v-model="ruleForm.Time2" style="width: 100%" />
               </el-form-item>
+            </el-col>
+          </el-form-item>
 
-              <el-form-item label="报名截止时间" required="True" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><AlarmClock /></el-icon>
-                  <div class="time-picker-group">
-                    <el-date-picker v-model="ruleForm.Date2" />
-                    <span class="time-separator">-</span>
-                    <el-time-picker v-model="ruleForm.Time2" />
-                  </div>
+          <el-form-item label="是否期望与参与者互通实名" prop="RealName">
+            <el-radio-group v-model="ruleForm.RealName">
+              <el-radio value="true">是</el-radio>
+              <el-radio value="false">否</el-radio>
+            </el-radio-group>
+          </el-form-item>
+
+          <el-form-item label="活动人数限额" prop="Num">
+            <el-input-number
+              v-model="ruleForm.Num"
+              :min="1"
+              :max="100"
+              @change="handleChange"
+            />
+          </el-form-item>
+
+          <el-form-item label="活动详情" prop="Detailed">
+            <el-input v-model="ruleForm.Detailed" type="textarea" />
+          </el-form-item>
+
+          <el-form-item style="margin-left: 450px">
+            <el-button type="primary" @click="submitForm(ruleFormRef)"
+              >创建</el-button
+            >
+            <el-button @click="resetForm(ruleFormRef)">重置</el-button>
+          </el-form-item>
+
+          <el-form-item label="活动海报" prop="Poster">
+            <el-upload
+              class="upload-demo"
+              action="#"
+              :auto-upload="false"
+              :on-change="handlePosterChange"
+              :show-file-list="false"
+              accept="image/*"
+            >
+              <el-button type="primary">点击上传</el-button>
+              <template #tip>
+                <div class="el-upload__tip">
+                  请上传活动海报图片
                 </div>
-              </el-form-item>
-
-
-          <!-- 第二行：实名互通和海报 -->
-          <div class="form-row">
-            <div class="form-column">
-              <el-form-item label="是否期望与参与者互通实名" prop="RealName" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><User /></el-icon>
-                  <el-radio-group v-model="ruleForm.RealName">
-                    <el-radio value="true">是</el-radio>
-                    <el-radio value="false">否</el-radio>
-                  </el-radio-group>
-                </div>
-              </el-form-item>
-              <el-form-item label="活动人数限额" prop="Num" class="form-item">
-                <div class="form-item-with-icon">
-                  <el-icon><UserFilled /></el-icon>
-                  <el-input-number
-                    v-model="ruleForm.Num"
-                    :min="1"
-                    :max="100"
-                    @change="handleChange"
-                  />
-                </div>
-              </el-form-item>
-              <el-form-item label="活动详情" prop="Detailed" class="form-item">
-                  <div class="form-item-with-icon">
-                    <el-icon><Notebook /></el-icon>
-                    <el-input v-model="ruleForm.Detailed" type="textarea" placeholder="请输入活动详情" rows="4" />
-                  </div>
-                </el-form-item>
-            </div>
-            
-            <div class="form-column">
-                  <el-form-item label="活动海报" prop="Poster" class="poster-item">
-                    <!-- 这里是“活动海报”的标题 -->
-                  </el-form-item>
-
-                  <div class="poster-upload-container">
-                    <!-- 这里是上传区域 -->
-                    <el-upload
-                      class="upload-demo"
-                      action="#"
-                      :auto-upload="false"
-                      :on-change="handlePosterChange"
-                      :show-file-list="false"
-                      accept="image/*"
-                    >
-                      <template v-if="!posterPreview">
-                        <div class="upload-area">
-                          <el-icon class="upload-icon"><Upload /></el-icon>
-                          <div class="upload-text">点击上传</div>
-                          <div class="upload-hint">请上传活动海报图片</div>
-                        </div>
-                      </template>
-                      <template v-else>
-                        <div class="poster-preview">
-                          <img :src="posterPreview" alt="海报预览"/>
-                        </div>
-                      </template>
-                    </el-upload>
-                  </div>
-                </div>
-          </div>
-
-
-          <el-form-item class="form-buttons">
-            <div class="button-container">
-              <el-button type="primary" @click="submitForm(ruleFormRef)">创建</el-button>
-              <el-button @click="resetForm(ruleFormRef)">重置</el-button>
+              </template>
+            </el-upload>
+            <div v-if="posterPreview" class="poster-preview">
+              <img :src="posterPreview" alt="海报预览" style="max-width: 200px; max-height: 200px;"/>
             </div>
           </el-form-item>
         </el-form>
@@ -153,9 +128,9 @@
   </div>
 </template>
 
+
 <script setup lang='ts'>
-import { ArrowLeft, Document, Location, MapLocation, Folder, 
-         Clock, AlarmClock, User, UserFilled, Notebook, Upload } from '@element-plus/icons-vue'
+import { ArrowLeft } from '@element-plus/icons-vue' // 添加这行导入
 import { reactive, ref } from "vue";
 import type {
   ComponentSize,
@@ -553,219 +528,49 @@ const goBack = () => {
 
 <style scoped>
 .centered-container {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+  height: 100vh; /* 使容器占满整个视口高度 */
 }
 
 .large-radius {
   background-color: white;
+  height: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 1700px;
   border: 1px solid var(--el-border-color);
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .header {
   width: 100%;
-  max-width: 900px;
-  padding: 20px 30px;
-  height: 50px;
+  max-width: 1200px;
+  max-height: 50px;
+  height: 100%;
   margin-bottom: 20px;
-  background-color: #071540d0;
-  color: white;
-  border-radius: 10px;
+  margin-right: auto;
+  background-color: #071540d0; /* 修改背景颜色 */
+  color: white; /* 修改字体颜色 */
+  border-radius: 10px; /* 设置圆角 */
   display: flex;
-  justify-content: center;
+  justify-content: center; /* 水平居中 */
 }
-
 .text {
-  color: white;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
+  color: white; /* 修改字体颜色 */
+  font-size: 30px; /* 修改字体大小 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
 }
-
 .page-container {
   width: 100%;
 }
-
-.form-columns {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.left-column {
-  flex: 1;
-  min-width: 0;
-}
-
-.right-column {
-  width: 250px;
-}
-
-.form-item {
-  margin-bottom: 20px;
-}
-
-.form-item-with-icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.form-item-with-icon .el-icon {
-  font-size: 18px;
-  color: #606266;
-  flex-shrink: 0;
-  vertical-align: text-top; /* 确保图标垂直居中对齐 */
-}
-
-.form-item-with-icon .el-input {
-  flex: 1;
-  height: 36px; /* 保证输入框的高度一致 */
-  line-height: 36px; /* 保证输入框的内容垂直居中 */
-}
-
-.poster-item {
-  margin-bottom: 10px; /* 确保标签与上传区域之间有适当的间距 */
-}
-
-
-.upload-icon {
-  font-size: 24px;
-  color: #909399;
-  margin-bottom: 8px;
-}
-
-.upload-text {
-  color: #606266;
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.upload-hint {
-  color: #909399;
-  font-size: 12px;
-}
-
-
-
-
-
-.upload-area:hover {
-  border-color: #409eff;
-}
-
-
-.time-picker-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-}
-
-.time-separator {
-  color: #909399;
-  padding: 0 5px;
-}
-
-.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-buttons {
-  display: flex;
-  justify-content: center; /* 水平居中按钮容器 */
-  align-items: center; /* 垂直居中按钮 */
-  margin-top: 30px; /* 给按钮添加一些上边距 */
-  width: 100%; /* 确保容器占满宽度 */
-}
-
-.button-container {
-  display: flex;
-  margin-left: 350px;
-  gap: 20px; /* 按钮之间添加间距 */
-  justify-content: center; /* 水平居中按钮 */
-}
-
-
-
-
-.el-form-item :deep(.el-form-item__label) {
-  font-weight: bold;
-}
-
-.form-row {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.form-column {
-  flex: 1;
-}
-
-/* 调整海报上传区域样式 */
-.poster-upload-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 20px; /* 向右移动上传区域 */
-}
-
-.upload-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-width: 240px;
-  height: 180px;
-  border: 1px dashed #dcdfe6;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-
+/* 添加海报预览样式 */
 .poster-preview {
-  width: 240px;         /* 固定宽度，确保预览区域大小一致 */
-  height: 180px;        /* 固定高度，确保预览区域大小一致 */
+  margin-top: 10px;
   border: 1px dashed #dcdfe6;
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;        /* 使用 flexbox 布局来居中图片 */
-  justify-content: center; /* 水平居中图片 */
-  align-items: center;   /* 垂直居中图片 */
+  border-radius: 4px;
+  padding: 10px;
+  display: inline-block;
 }
-
-.poster-preview img {
-  max-width: 100%;      /* 图片最大宽度为容器宽度 */
-  max-height: 100%;     /* 图片最大高度为容器高度 */
-  object-fit: contain;  /* 保持图片比例，自适应容器大小 */
-}
-
-
-.form-item.full-width {
-  width: 100%; /* 使 el-form-item 占满一行 */
-}
-
-.form-item.full-width .el-input {
-  width: 100%; /* 使 el-input 占满 el-form-item 的宽度 */
-}
-
-.demo-ruleForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-item-with-icon {
-  width: 90%; /* 确保包含图标的容器也占满宽度 */
-}
-
 </style>

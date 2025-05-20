@@ -1,54 +1,198 @@
 <template>
-  <div class="event-container">
-    <!-- 顶部 Header -->
-    <div class="header">
-      
-      <img src="/Logos/Logo.png" alt="TJLinker Logo" class="logo-image" />
-      <div class="user-info">
-        <img :src="user.avatarUrl" class="avatar" alt="User Avatar" />
-        <div class="user-id">ID: {{ user.id }}</div>
-      </div>
+  <div>
+    <!-- 调用导航栏组件 -->
+    <TopNavBarWithoutSearch :avatar="user.avatarUrl" :nickname="user.username" :userId="user.id" />
+  </div>
+
+  <!-- 活动详情页面内容 -->
+  <div class="page-container">
+    <!-- 蓝色长条 -->
+    <div class="blue-bar">
+      <span class="bar-text">活动详情</span>
     </div>
+    <!-- 滑动区域 -->
+    <div class="event-details-scroll">
+      <el-scrollbar style="height: 680px;">
+        <div class="event-details">
+          <!-- 活动标题和标签 -->
+          <!-- 活动标题和标签 -->
+          <div class="event-header">
+            <h1 class="event-title">{{ event.title }}</h1>
+            <!-- 添加海报展示 -->
+            <div class="event-poster" v-if="event.posterUrl">
+              <img :src="event.posterUrl" alt="活动海报" class="poster-image" />
+            </div>
+            <div class="event-tags">
+              <el-tag v-for="tag in event.tags" :key="tag" type="info" class="tag">{{ tag }}</el-tag>
+            </div>
+            <span class="people-count">人数 {{ event.currentParticipants }}/{{ event.maxParticipants }}</span>
 
-    <!-- 活动卡片区域 -->
-    <div class="event-card">
-      <div class="card-title">活动详情</div>
+            <!-- 按钮 -->
+            <div class="button">
+              <div v-if="joinStatus === 'creator'" class="action-buttons">
+                <div class="dissolve-button-container">
+                  <el-button type="danger" size="small" @click="handleDissolveTeam">解散队伍</el-button>
+                </div>
+                <div class="chatroom-link">
+                  <span @click="enterChatroom" class="chatroom-text">进入聊天室 ></span>
+                </div>
+              </div>
 
-      <div class="event-info-grid">
-        <div class="info-row"><span>活动名称：</span><span>{{ event.title }}</span></div>
-        <div class="info-row"><span>活动校区：</span><span>{{ event.campus }}</span></div>
-        <div class="info-row"><span>活动地点：</span><span>{{ event.location }}</span></div>
-        <div class="info-row">
-          <span>活动类型：</span>
-          <span>
-            <el-tag
-              v-for="tag in event.tags"
-              :key="tag"
-              size="small"
-              type="success"
-            >
-              {{ tag }}
-            </el-tag>
-          </span>
-        </div>
-        <div class="info-row"><span>活动时间：</span><span>{{ event.time }}</span></div>
-        <div class="info-row"><span>报名截止：</span><span>{{ event.registrationDeadline }}</span></div>
-        <div class="info-row">
-          <span>人数上限：</span>
-          <span>{{ event.currentParticipants }}/{{ event.maxParticipants }}</span>
-        </div>
-        <div class="info-row info-detail-row">
-          <span>活动详情：</span>
-          <span class="event-desc">{{ event.description }}</span>
-        </div>
-      </div>
+              <!-- 如果用户未加入且未提交申请 -->
+              <div v-if="joinStatus === 'notjoined'" class="dissolve-button-container">
+                <!-- 报名截止时间已过 -->
+                <div v-if="isRegistrationClosed">
+                  <el-button type="danger" size="small" disabled>活动报名截止</el-button>
+                </div>
+                <!-- 人数已满 -->
+                <div v-else-if="isParticipantsFull">
+                  <el-button type="danger" size="small" disabled>活动报名已满</el-button>
+                </div>
+                <!-- 正常加入按钮 -->
+                <div v-else>
+                  <el-button type="primary" size="small" @click="joinActivity">加入队伍</el-button>
+                </div>
+              </div>
 
-      <!-- 操作区域 -->
-      <div class="action-area">
-        <el-button type="primary" size="small" @click="enterChatroom">进入聊天室</el-button>
-        <el-button type="success" size="small" @click="joinEvent">加入队伍</el-button>
-        <el-button type="danger" size="small" @click="quitEvent">退出队伍</el-button>
-      </div>
+              <!-- 如果用户已提交申请，显示待审核 -->
+              <div v-if="joinStatus === 'waiting'" class="dissolve-button-container">
+                <el-button type="primary" size="small" disabled>待审核</el-button>
+              </div>
+
+              <!-- 已经加入要退出 -->
+              <div v-if="joinStatus === 'joined'" class="action-buttons">
+                <div class="dissolve-button-container">
+                  <el-button type="danger" size="small" @click="Quit">退出队伍</el-button>
+                </div>
+                <div class="chatroom-link">
+                  <span @click="enterChatroom" class="chatroom-text">进入聊天室 ></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 校区和地点 -->
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>活动校区：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.campus }}</span>
+              </div>
+            </el-col>
+            <el-col :span="2">
+              <div class="info-item">
+                <span>活动地点：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.location }}</span>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>活动时间：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.time }}</span>
+              </div>
+            </el-col>
+            <el-col :span="2">
+              <div class="info-item">
+                <span>报名截止时间：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.registrationDeadline }}</span>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>是否实名：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.isRealName ? "是" : "否" }}</span>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>人数上限：</span>
+              </div>
+            </el-col>
+            <el-col :span="8">
+              <div class="info-item">
+                <span>{{ event.maxParticipants }}</span>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>活动详情：</span>
+              </div>
+            </el-col>
+            <el-col :span="20">
+              <div class="info-item">
+                <p>{{ event.description }}</p>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>活动创建者：</span>
+              </div>
+            </el-col>
+            <el-col :span="20">
+              <div
+                class="info-item"
+                :class="{ 'disabled-click': isCreator }"
+                @click="PrivateChat"
+              >
+                <span class="private-text">{{ creator.username }}</span>
+                <p>（ID:{{ event.creatorId }}）</p>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row style="margin-left: 70px; margin-bottom: 20px;">
+            <el-col :span="2">
+              <div class="info-item">
+                <span>已加入人员：</span>
+              </div>
+            </el-col>
+            <el-col :span="10">
+              <div class="members-list-inline">
+                <el-tag v-for="memberId in event.joinedMembers" :key="memberId" type="success" class="tag">
+                  {{ memberId }}
+                </el-tag>
+              </div>
+            </el-col>
+          </el-row>
+
+        </div>
+      </el-scrollbar>
     </div>
 
     <!-- 底部 poster 插图展示 -->
@@ -133,9 +277,6 @@ export default {
     },
   },
   methods: {
-    goBack() {
-    this.$router.push('/home');
-  },
     updateCurrentDate() {
       this.currentDate = new Date();
     },
@@ -409,161 +550,148 @@ export default {
 };
 </script>
 
-
 <style scoped>
-.event-container {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  padding: 32px 20px;
-  background: #f9fbfd;
-  max-width: 960px;
-  margin: auto;
-  color: #2c3e50;
+.disabled-click {
+  pointer-events: none;
+  color: gray;
+  cursor: default;
 }
 
-/* 顶部 header */
-.header {
+.button {
+  position: absolute;
+  /* margin-right: 100px; */
+}
+
+.page-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e0e6ed;
-}
-
-.logo-image {
-  height: 48px;
-  object-fit: contain;
-}
-
-/* 用户信息样式 */
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #409EFF;
-  object-fit: cover;
-}
-
-.user-id {
-  font-size: 13px;
-  color: #666;
-}
-
-/* 活动卡片 */
-.event-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  padding: 28px;
-  margin-bottom: 30px;
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #337ecc;
-  padding: 14px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* 信息展示栅格 */
-.event-info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 16px;
-  column-gap: 32px;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  color: #333;
-}
-
-.info-detail-row {
-  grid-column: span 2;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.event-desc {
-  white-space: pre-wrap;
-  margin-top: 8px;
-  color: #444;
-  line-height: 1.5;
+.event-details-scroll {
+  width: 100%;
+  max-width: 1450px;
+  margin-top: 10px;
 }
 
-/* 操作按钮区域 */
-.action-area {
-  margin-top: 24px;
+.event-details {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.event-header {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  /* 确保内容垂直居中 */
+  justify-content: flex-start;
+  /* 将内容分布到两端 */
+  margin-left: 50px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.event-tags {
+  margin-left: 10px;
+}
+
+.people-count {
+  margin-left: 10px;
+}
+
+.info-item {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: row;
+}
+
+.members-list-inline {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
 }
 
-/* 海报展示 */
-.poster-container {
-  margin-top: 32px;
-  text-align: center;
+.tag {
+  margin-right: 10px;
+  /* margin-top: 5px; */
+}
+
+.blue-bar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #161676;
+  color: #fff;
+  width: 1450px;
+  height: 60px;
+  border-radius: 5px;
+  margin-top: 110px;
+}
+
+.bar-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.dissolve-button-container {
+  margin-left: 1100px;
+  /* margin-right: 150px; */
+}
+
+.chatroom-text {
+  margin-left: 20px;
+  color: #646464;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.private-text {
+  /* margin-left: 20px; */
+  color: #646464;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chatroom-text:hover {
+  text-decoration: underline;
+  /* 鼠标悬停时增加下划线 */
+}
+
+.private-text:hover {
+  text-decoration: underline;
+  /* 鼠标悬停时增加下划线 */
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.event-poster {
+  position: fixed;  /* 或者 absolute，取决于你的布局需求 */
+  right: 120px;      /* 距离右侧的距离 */
+  top: 50%;         /* 从顶部向下50% */
+  transform: translateY(-50%); /* 向上移动自身高度的一半，实现垂直居中 */
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .poster-image {
   width: 100%;
-  max-width: 250px; /* 固定最大宽度 */
-  height: auto;
-  aspect-ratio: 4 / 3; /* 或者使用固定比例 */
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  object-fit: contain; /* 确保完整展示不裁剪 */
-  margin: 0 auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* 页脚创建者信息 */
-.footer {
-  margin-top: 28px;
-  font-size: 14px;
-  color: #888;
-  text-align: center;
-}
-
-.clickable {
-  cursor: pointer;
-  color: #409EFF;
-  font-weight: 500;
-}
-
-.clickable:hover {
-  text-decoration: underline;
-}
-.back-button {
-  font-size: 14px;
-  color: #fff;                      /* 文字颜色改为白色 */
-  background-color: #409EFF;        /* 添加背景色 */
-  padding: 8px 15px;                /* 增加内边距 */
-  border-radius: 4px;               /* 添加圆角 */
-  text-decoration: none;            /* 去除下划线 */
-  transition: all 0.3s;             /* 添加过渡效果 */
-  border: none;                     /* 去除边框 */
-  cursor: pointer;                  /* 鼠标悬停指针样式 */
-  position: absolute;               /* 绝对定位 */
-  right: 420px;                      /* 距离右侧20px */
-  top: 800px;                        /* 距离顶部20px */
-}
-
-/* 鼠标悬停效果 */
-.back-button:hover {
-  background-color: #66b1ff;        /* 悬停时背景色变亮 */
-  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3); /* 添加阴影效果 */
-}
 </style>

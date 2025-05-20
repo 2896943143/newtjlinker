@@ -79,7 +79,7 @@
     top: 25px;
     left: 0;
     z-index: 1;
-    background-color: #F5F5F5;
+    background-image: linear-gradient(to right, #a1e4ff, #e5f5f8);
     width:100%;
 
   }
@@ -97,19 +97,19 @@
     align-items: center;
     margin-left: 30px;
     margin-right: 30px;
-    background-color: #F5F5F5;
+    background-color: #e5f5f8;
     border-radius: 30px;
     padding: 5px;
     width: 250px;
     height: 40px;
-    border: 1px solid #ccc; /* 添加边框 */
+    border: 1px solid #100606; /* 添加边框 */
   }
 
   .navbar-user{
     display: flex;
     align-items: center;
     margin-left: 520px;   
-    background-color: #F5F5F5;
+    background-color: #e5f5f8;
     border-radius: 30px;
     padding: 5px;
     width: 250px;
