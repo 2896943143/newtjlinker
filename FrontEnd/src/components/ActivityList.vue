@@ -1,6 +1,8 @@
 <template>
   <div class="page-container">
-    <div class="activity-card">
+    <!-- 新增海报容器 -->
+    <div class="activity-card-list">
+      <!-- 海报属性说明 -->
       <ActivityBasic
         v-for="(activity, index) in activities"
         :key="activity.ActivityID"
@@ -9,11 +11,14 @@
         :Num="activity.Num"
         :DueDate="activity.DueDate"
         :ActivityID="activity.ActivityID"
+        :posterUrl="activity.posterUrl"
         :top="index % 2 === 0 ? `${index * 60 - 15}px` : `${(index-1) * 60 - 15}px`"
         :left="index % 2 === 0 ? '30px' : '680px'"
         :right="index % 2 === 0 ? '700px' : '30px'"
       />
     </div>
+
+    <!-- 分页组件 -->
     <el-pagination
       layout="prev, pager, next"
       :total="total"
@@ -59,23 +64,33 @@ const total = ref(0)
 const currentPage = ref(1)
 const pageSize = 10
 
+// 修改API请求参数
 const fetchActivities = async (page: number, keyword: string, category: string, user_id: string, currentMenu: string) => {
   try {
-    const url = currentMenu === '1' ? "http://127.0.0.1:8000/api/search_and_filter_activities/" : "http://127.0.0.1:8000/api/search_and_filter_dingyueactivities/";
+    const url = currentMenu === '1' 
+      ? "http://127.0.0.1:8000/api/search_and_filter_activities/"
+      : "http://127.0.0.1:8000/api/search_and_filter_dingyueactivities/";
+
     const params = {
       word: keyword,
       page: page.toString(),
       pageSize: pageSize.toString(),
       category: category,
-      user_id: user_id
+      user_id: user_id,
+      includePoster: true // 新增参数标记
     };
 
     const queryParams = new URLSearchParams(params).toString();
     const encodedUrl = `${url}?${queryParams}`;
 
     const response = await axios.get(encodedUrl);
+    
     if (response.data.success) {
-      activities.value = response.data.data;
+      // 处理响应数据，添加海报URL
+      activities.value = response.data.data.map(activity => ({
+        ...activity,
+        posterUrl: activity.PosterUrl || '' // 根据实际API字段调整
+      }));
       total.value = response.data.total;
     } else {
       activities.value = [];
@@ -94,44 +109,34 @@ const handlePageChange = (page: number) => {
 }
 
 const getCategory = () => {
-  if (props.firstCategory !== '' && props.secondCategory !== '') {
-    return `${props.firstCategory},${props.secondCategory}`;
-  } else if (props.firstCategory !== '') {
-    return props.firstCategory;
-  } else {
-    return '全部';
-  }
+  return [props.firstCategory, props.secondCategory]
+    .filter(Boolean)
+    .join(',') || '全部';
 }
 
 onMounted(() => {
   fetchActivities(currentPage.value, props.searchKeyword, getCategory(), props.user_id, props.currentMenu);
 })
 
-watch([() => props.firstCategory, () => props.secondCategory, () => props.searchKeyword, () => props.currentMenu], ([newFirstCategory, newSecondCategory, newSearchKeyword, newCurrentMenu]) => {
-  fetchActivities(currentPage.value, newSearchKeyword, getCategory(), props.user_id, newCurrentMenu);
+watch([() => props.firstCategory, () => props.secondCategory, () => props.searchKeyword], ([newFC, newSC, newKW]) => {
+  fetchActivities(currentPage.value, newKW, getCategory(), props.user_id, props.currentMenu);
 });
 </script>
 
 <style scoped>
-.page-container {
+/* 新增海报容器样式 */
+.activity-card-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px; /* 为分页留出空间 */
 }
 
+/* 保持原有样式 */
 .pagination {
   height: 10px;
   padding: 16px; 
-  margin-top: 600px;
-  margin-right: 200px;
+  margin-top: 20px; /* 调整分页位置 */
   justify-content: center;
-}
-
-.category-info {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #333;
 }
 </style>

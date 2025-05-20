@@ -53,10 +53,11 @@ export default {
     },
     methods: {
         Chat() {
+            localStorage.setItem('activityName', this.title);
             localStorage.setItem('another_person', this.id);
             // activityId: localStorage.getItem('activityId')
             // userId: localStorage.getItem('userId')
-            router.push('/new-chat');
+            router.push('/chat-personal');
         },
     }
 };

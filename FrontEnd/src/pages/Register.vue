@@ -1,9 +1,18 @@
 <template>
-  <div class="image-container">
-    <img src='/Logos/RegisterTitle.png' alt="title" class="full-width-image" />
-  </div>
   <div class='page-container'>
-    <v-app>
+    <div style="margin-bottom: 0px; margin-top: 20px; justify-content: center; align-items: center; display: flex; border-radius: 10px;">
+      <ImageButton
+        url="/some-page"
+        imageSrc="/Logos/Icon.png"
+        altText="Example Image"
+        borderRadius="15px"
+        width="75px"
+        height="89px"
+        @click="router.push('/welcome')"
+      />
+      <img src='/Logos/Logo.png' style='width: 300px;' alt='Logo'>
+    </div>
+    <v-app style="margin-top: -12px; padding-top: 0;">
       <v-container>
         <div class="card">
           <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" status-icon :rules="rules"
@@ -39,7 +48,7 @@
               <el-input v-model="ruleForm.q3" />
             </el-form-item>
 
-            <el-form-item style="margin-left: 180px;margin-top: 30px">
+            <el-form-item style="margin-left: 215px;margin-top: 30px">
               <el-button type="primary" @click="submitForm(ruleFormRef)">
                 提交
               </el-button>
@@ -208,10 +217,17 @@ const resetForm = (formEl: FormInstance | undefined) => {
   background-color: transparent; 
   display: flex;
   flex-direction: column;
-  margin-top: 170px;
+  margin-top: -30px;
    /*min-height: 100vh; 确保页面背景色覆盖整个视口 */
 }
 
+.el-form-item {
+  margin-bottom: 18px; /* 默认是 24px，可根据需要缩小 */
+}
+
+.el-form-item p {
+  margin: 0px 0 -2px 0; /* 缩小 label 下的提示文字间距 */
+}
 
 .confirm-button {
   display: block;
@@ -227,11 +243,14 @@ const resetForm = (formEl: FormInstance | undefined) => {
 }
 
 .full-width-image {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
 }
 
 .button-container {

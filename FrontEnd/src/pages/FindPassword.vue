@@ -1,9 +1,6 @@
 <!-- 逻辑完全实现，只差页面修改 -->
 
 <template>
-  <div class="image-container">
-    <img src='/Logos/FindPasswordTitle.png' alt="title" class="full-width-image" />
-  </div>
   <div class='page-container'>
     <v-app>
       <v-container>
@@ -21,7 +18,7 @@
             <!-- 第一步：输入用户ID和三个密码问题 -->
             <v-stepper-content v-if="currentStep === 1" :step="1">
               <v-card class="custom-card" title="验证用户信息" flat>
-                <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" status-icon :rules="rules"
+                <el-form ref="ruleFormRef" style="max-width: 550px" :model="ruleForm" status-icon :rules="rules"
                   label-width="auto" class="demo-ruleForm">
 
                   <el-form-item label="用户ID" prop="userId">
@@ -40,7 +37,7 @@
                     <el-input v-model="ruleForm.question3" type="text" autocomplete="off" />
                   </el-form-item>
 
-                  <el-form-item style="margin-left: 220px;margin-top: 30px">
+                  <el-form-item style="margin-left: 250px;margin-top: 30px">
                     <el-button type="primary" @click="submitForm(ruleFormRef)">
                       提交
                     </el-button>
@@ -78,7 +75,7 @@
       </div>
 
         <div class='button-container'>
-          <WhiteButton width='150px' height='40px' style='margin-left: 0px' @click="router.push('/login/user')">
+          <WhiteButton width='150px' height='40px' style='margin-left: 30px' @click="router.push('/login/user')">
             <p style='font-size: 15px'>返回用户登录界面</p>
           </WhiteButton>
 
@@ -97,6 +94,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 import { ref, reactive } from 'vue';
 import type { FormInstance, FormRules } from 'element-plus';
+// import { ElMessage } from 'element-plus';
 
 const ruleFormRef = ref<FormInstance>();
 const currentStep = ref(1); // 当前步骤
@@ -152,11 +150,11 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         const data = await response.json();
 
         if (data.success) {
-          alert('验证成功');
+          ElMessage.success('验证成功');
           currentStep.value = 2;  // 切换到第二步
           stepperKey.value++;     // 强制刷新步骤器
         } else {
-          alert(data.message);
+          ElMessage.error(data.message);
         }
       } else if (currentStep.value === 2) {
         // 向后端请求更新密码
@@ -175,14 +173,16 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         const data = await response.json();
 
         if (data.success) {
-          alert('密码更新成功');
+          ElMessage.success('密码更新成功，即将自动跳转登录页面');
+          setTimeout(() => {  
+            // 跳转到登录页，例如使用 vue-router
+            router.push('/login/user');
+          }, 1500); // 1.5 秒后跳转
         } else {
-          alert(data.message);
+          ElMessage.error(data.message);
         }
       }
-    } else {
-      alert('表单验证失败');
-    }
+    } 
   });
 };
 
@@ -207,15 +207,13 @@ const resetForm = (formEl: FormInstance | undefined) => {
 <style scoped>
 /* 样式根据你的需求调整 */
 
-
-
 .page-container {
   background-color: transparent; 
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: center;
-  margin-top: 190px;
+  margin-top: 0px;
   width: 1000px;
 }
 
@@ -230,7 +228,8 @@ const resetForm = (formEl: FormInstance | undefined) => {
   width: 100%;
   height: 100%;
   max-width: 600px;
-  margin: 100px auto;
+  margin: 80px auto;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 
@@ -285,5 +284,6 @@ const resetForm = (formEl: FormInstance | undefined) => {
 }
 .v-stepper.v-sheet {
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 </style>
