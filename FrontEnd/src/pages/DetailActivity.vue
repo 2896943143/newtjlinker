@@ -2,7 +2,6 @@
   <div class="event-container">
     <!-- 顶部 Header -->
     <div class="header">
-      
       <img src="/Logos/Logo.png" alt="TJLinker Logo" class="logo-image" />
       <div class="user-info">
         <img :src="user.avatarUrl" class="avatar" alt="User Avatar" />
@@ -45,9 +44,32 @@
 
       <!-- 操作区域 -->
       <div class="action-area">
-        <el-button type="primary" size="small" @click="enterChatroom">进入聊天室</el-button>
-        <el-button type="success" size="small" @click="joinEvent">加入队伍</el-button>
-        <el-button type="danger" size="small" @click="quitEvent">退出队伍</el-button>
+        <!-- 创建者看到的按钮 -->
+        <template v-if="joinStatus === 'creator'">
+          <el-button type="danger" size="small" @click="handleDissolveTeam">解散队伍</el-button>
+          <el-button type="primary" size="small" @click="enterChatroom">进入聊天室</el-button>
+        </template>
+        
+        <!-- 已加入用户看到的按钮 -->
+        <template v-else-if="joinStatus === 'joined'">
+          <el-button type="danger" size="small" @click="Quit">退出队伍</el-button>
+          <el-button type="primary" size="small" @click="enterChatroom">进入聊天室</el-button>
+        </template>
+        
+        <!-- 等待审核用户看到的按钮 -->
+        <template v-else-if="joinStatus === 'waiting'">
+          <el-button type="primary" size="small" disabled>待审核</el-button>
+        </template>
+        
+        <!-- 未加入用户看到的按钮 -->
+        <template v-else>
+          <!-- 报名截止时间已过 -->
+          <el-button v-if="isRegistrationClosed" type="danger" size="small" disabled>活动报名截止</el-button>
+          <!-- 人数已满 -->
+          <el-button v-else-if="isParticipantsFull" type="danger" size="small" disabled>活动报名已满</el-button>
+          <!-- 正常加入按钮 -->
+          <el-button v-else type="primary" size="small" @click="joinActivity">加入队伍</el-button>
+        </template>
       </div>
     </div>
 
@@ -62,9 +84,9 @@
       <span class="clickable">{{ creator.username }} (ID: {{ event.creatorId }})</span>
     </div>
     
-      <el-button class="back-button" type="text" @click="goBack">
-        ← 返回
-      </el-button>
+    <el-button class="back-button" type="text" @click="goBack">
+      ← 返回
+    </el-button>
   </div>
 </template>
 
