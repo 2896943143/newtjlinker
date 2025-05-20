@@ -223,7 +223,6 @@ class UserInfoView(APIView):
         userinfo['Tag']=list1
         userimage = usercount.Image.all().first()
         userinfo['Avatar']='http://127.0.0.1:8000'+UserImageSerializer(userimage).data['M_Image']
-        #print(userinfo['Avatar'])
         return Response(userinfo, status=status.HTTP_200_OK)
 
 class EditInfoView(APIView):

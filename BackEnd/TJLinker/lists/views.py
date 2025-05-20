@@ -2,11 +2,15 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 from accounts.models import UserActivity,UserMessage,UserActivity,UserAccount
 from accounts.serializers import UserMessageSerializer,UserActivitySerializer
 from .models import Activity, Class
 from .serializers import ActivitySerializer, ActivitySearchSerializer, ClassSerializer
 from .models import PersonalChatMessage
+import json
+from channels.generic.websocket import AsyncWebsocketConsumer
 from .serializers import PersonalChatMessageSerializer
 from accounts.models import UserAccount, UserInfo, UserImage
 from django.utils.dateparse import parse_datetime
@@ -24,42 +28,16 @@ from accounts.serializers import UserImageSerializer
 
 from django.db.models import Q
 from django.db.models import Max
+from django.utils import timezone
 from dateutil import parser
-
-import os
-from django.conf import settings
-from rest_framework.parsers import MultiPartParser, FormParser
 
 
 class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
-    parser_classes = (MultiPartParser, FormParser)  # 添加对文件上传的支持
-
 
     def create(self, request, *args, **kwargs):
-        data = request.data.copy()
-        poster_file = request.FILES.get('poster')  # 获取上传的海报文件
-        
-        # 处理海报文件
-        if poster_file:
-            # 生成唯一的文件名
-            timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-            file_ext = os.path.splitext(poster_file.name)[1]
-            filename = f"poster_{timestamp}{file_ext}"
-            
-            # 保存文件到media/posters目录
-            save_path = os.path.join(settings.MEDIA_ROOT, 'posters', filename)
-            os.makedirs(os.path.dirname(save_path), exist_ok=True)
-            
-            with open(save_path, 'wb+') as destination:
-                for chunk in poster_file.chunks():
-                    destination.write(chunk)
-            
-            # 设置海报URL
-            data['PosterUrl'] = os.path.join('posters', filename).replace('\\', '/')
-            
-            
+        data = request.data
         # print(data)
 
         Name = data.get('Name')
@@ -112,13 +90,7 @@ class ActivityViewSet(viewsets.ModelViewSet):
                 {"message": "Class record not found", "errors": {"ClassID": "Class record not found"}},
                 status=status.HTTP_400_BAD_REQUEST
             )
-            
-        from urllib.parse import urljoin
-        PosterUrl = urljoin(
-            'http://127.0.0.1:8000/',  # 注意末尾要有 `/`
-            urljoin(settings.MEDIA_URL, data['PosterUrl'])
-        )
-        print(PosterUrl)
+
         user_data = {
             'Name': Name,
             'CreatorID': CreatorID,
@@ -129,8 +101,7 @@ class ActivityViewSet(viewsets.ModelViewSet):
             'StartDate': StartDate,
             'DueDate': DueDate,
             'NeedRealName': NeedRealName,
-            'NumLimit': NumLimit,
-            'PosterUrl': PosterUrl  # 添加海报URL
+            'NumLimit': NumLimit
         }
         serializer = self.get_serializer(data=user_data)
         if serializer.is_valid():
@@ -412,8 +383,7 @@ class GetActivityDetailView(APIView):
                 'NumCurrent': str(activity.NumCurrent),
                 'Description': activity.Description,
                 'Participants': participants,
-                'CreatorID': activity.CreatorID,
-                'PosterUrl':activity.PosterUrl
+                'CreatorID': activity.CreatorID
             }
 
             return Response({
@@ -1254,5 +1224,259 @@ class GetLatestMessagesView(APIView):
         return Response({
             "messages": serializer.data
         }, status=status.HTTP_200_OK)
+
+class NewGetChatList(APIView):
+    def get(self, request):
+        myId = request.GET.get('userId')
+        #私有聊天
+        messages = PersonalChatMessage.objects.filter(
+            Q(SendUserID=myId) | Q(ReceiveUserID=myId)
+        ).order_by('-Timestamp')
+
+        chat_dict = {}
+        seen_partners = set()
+
+        for msg in messages:
+            # 找出对方用户 ID
+            partner_id = msg.ReceiveUserID if msg.SendUserID == myId else msg.SendUserID
+
+            # 只记录第一次遇到的（时间最新的一条）
+            if partner_id not in seen_partners:
+                user_info = UserInfo.objects.get(I_User__UserID=partner_id)
+                partner_name = user_info.Name
+                chat_dict[partner_id] = (msg.Message,partner_name,0)
+                seen_partners.add(partner_id)
+
+        #我发送过消息的聊天
+        room_ids = (
+            ChatMessage.objects
+            .filter(UserID=myId)
+            .values_list('RoomID', flat=True)
+            .distinct()
+        )
+
+        for room_id in room_ids:
+            last_msg = (
+                ChatMessage.objects
+                .filter(RoomID=room_id)
+                .order_by('-Timestamp')
+                .first()
+            )
+            if last_msg:
+                activity = Activity.objects.get(ActivityID=room_id)
+                chat_dict[room_id] = (last_msg.Message,activity.Name,1)
+
+        ua = UserActivity.objects.get(A_User__UserID=myId)
+
+        # 假设 A_CreateActivity、A_JoinActivity 是用逗号分隔的活动 ID 列表
+        def split_ids(s):
+            return [x.strip() for x in s.split(',') if x.strip()]
+
+        created = split_ids(ua.A_CreateActivity)
+        joined = split_ids(ua.A_JoinActivity)
+        activity_ids = set(created + joined)
+
+        for aid in activity_ids:
+            new_aid = f"0{aid}"
+            if new_aid in room_ids:
+                continue
+            msg = (
+                ChatMessage.objects
+                .filter(RoomID=new_aid)
+                .order_by('-Timestamp')
+                .first()
+            )
+            activity = Activity.objects.get(ActivityID=aid)
+            if msg:
+                chat_dict[new_aid] = (msg.Message,activity.Name,1)
+            else:
+                chat_dict[new_aid] = (None,activity.Name,1)
+        result = [
+            {
+                'id': aid,
+                'message': message,
+                'name': name,
+                'type': typ
+            }
+            for aid, (message, name, typ) in chat_dict.items()
+        ]
+        return Response( result, status=status.HTTP_200_OK)
+
+class LoadMessagePerson(APIView):
+    def get(self, request):
+        user_id = request.GET.get('userId')
+        other_id = request.GET.get('otherId')
+
+        # 查询两个用户之间所有互发消息
+        messages = PersonalChatMessage.objects.filter(
+            Q(SendUserID=user_id, ReceiveUserID=other_id) |
+            Q(SendUserID=other_id, ReceiveUserID=user_id)
+        ).order_by('Timestamp')
+
+        user = get_object_or_404(UserAccount, UserID=user_id)
+        # 获取用户头像，如果不存在就返回默认图
+        user_image_user = UserImage.objects.filter(M_User=user).first()
+        image_url_user = user_image_user.M_Image.url
+
+        other = get_object_or_404(UserAccount, UserID=other_id)
+        # 获取用户头像，如果不存在就返回默认图
+        user_image_other = UserImage.objects.filter(M_User=other).first()
+        image_url_other = user_image_other.M_Image.url
+
+        data = []
+        for msg in messages:
+            sender_id = msg.SendUserID
+            sendUser = get_object_or_404(UserAccount, UserID=sender_id)
+            info = UserInfo.objects.get(I_User=sendUser)
+            name = info.Name
+            avatar_url = image_url_user if sender_id == user_id else image_url_other
+
+            data.append({
+                'from': sender_id,
+                'message': msg.Message,
+                'time': msg.Timestamp.isoformat(),
+                'avatar_url': avatar_url,
+                'name':name
+            })
+        return Response(data, status=status.HTTP_200_OK)
+
+class LoadMessageGroup(APIView):
+    def get(self, request):
+        room_id = request.GET.get('roomId')
+        qs = ChatMessage.objects.filter(RoomID=room_id).order_by('Timestamp')
+        data = []
+        for msg in qs:
+            sender_id = msg.UserID
+            # 如果你有 User 模型并且 UserID 对应 User.pk，可以这样获取昵称：
+            sendUser = get_object_or_404(UserAccount, UserID=sender_id)
+            info = UserInfo.objects.get(I_User=sendUser)
+            name = info.Name
+            data.append({
+                'from': sender_id,
+                'message': msg.Message,
+                'time': msg.Timestamp.isoformat(),
+                'avatar_url': msg.AvatarUrl,
+                'name': name,
+            })
+        return Response(data, status=status.HTTP_200_OK)
+
+class SendMessageViewPerson(APIView):
+    def post(self, request):
+        message = request.data.get('message')
+        send_user_id = request.data.get('sendUserId')
+        receive_user_id = request.data.get('receiveUserId')
+        timestamp = timezone.now()
+
+        if not message or not send_user_id or not receive_user_id or not timestamp:
+            return Response({"error": "Message, SendUserID, ReceiveUserID, and Timestamp are required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # 创建私聊消息对象
+        personal_chat_message = PersonalChatMessage(
+            SendUserID=send_user_id,
+            ReceiveUserID=receive_user_id,
+            Message=message,
+            Timestamp=timestamp
+        )
+        personal_chat_message.save()
+        user = get_object_or_404(UserAccount, UserID=send_user_id)
+        # 获取用户头像，如果不存在就返回默认图
+        user_image_user = UserImage.objects.filter(M_User=user).first()
+        image_url_user = user_image_user.M_Image.url
+        info = UserInfo.objects.get(I_User=user)
+        name = info.Name
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "chat",
+            {
+                "type": "send_new_message",  # 对应 consumers 中的 `send_new_message` 方法名
+                "message": {'message': message,'from1':send_user_id,'to1':receive_user_id,'avatar_url':image_url_user,'time1': timestamp.isoformat(),'name':name,'chatId':send_user_id},
+            }
+        )
+
+
+        return Response({'from':send_user_id,'message': message,'time': timestamp.isoformat(),'avatar_url': image_url_user,'name':name}, status=status.HTTP_200_OK)
+
+class SendMessageGroup(APIView):
+    def post(self, request):
+        room_id = request.data.get('roomId')
+        user_id = request.data.get('userID')
+        message = request.data.get('message')
+        timestamp = timezone.now()
+
+        user = get_object_or_404(UserAccount, UserID=user_id)
+        # 获取用户头像，如果不存在就返回默认图
+        user_image_user = UserImage.objects.filter(M_User=user).first()
+        image_url_user = user_image_user.M_Image.url
+
+        info = UserInfo.objects.get(I_User=user)
+        name = info.Name
+
+        # 创建聊天消息对象
+        chat_message = ChatMessage(RoomID=room_id, UserID=user_id, Message=message, AvatarUrl=image_url_user, Timestamp=timestamp)
+        chat_message.save()
+
+        activity_id = room_id[1:]
+
+        activity = get_object_or_404(Activity, ActivityID=activity_id)
+
+        # 2. 拆分参与者 ID（如果字段为空，就返回空列表）
+        if activity.ParticipantsID:
+            # 假设 ParticipantsID 存的是 “1,2,3” 这样的字符串
+            participant_ids = [pid.strip() for pid in activity.ParticipantsID.split(',') if pid.strip()]
+        else:
+            participant_ids = []
+
+        # 3. 把创建者也加进去（若存在且不在列表里）
+        if activity.CreatorID:
+            creator_id = activity.CreatorID.strip()
+            if creator_id and creator_id not in participant_ids:
+                participant_ids.append(creator_id)
+
+        channel_layer = get_channel_layer()
+        for nowUser in participant_ids:
+            if nowUser==user_id:
+                continue
+            group_name = "chat"
+            async_to_sync(channel_layer.group_send)(
+                group_name,
+                {
+                    "type": "send_new_message",  # Consumer 里对应的方法名：async def send_new_message(self, event)
+                    "message": {
+                        "message": message,
+                        "from1": user_id,
+                        "to1": nowUser,
+                        "avatar_url": image_url_user,
+                        "time1": timestamp.isoformat(),
+                        "name": name,
+                        'chatId':room_id
+                    },
+                }
+            )
+
+        return Response({'from':user_id,'message': message,'time': timestamp.isoformat(),'avatar_url': image_url_user,'name':name}, status=status.HTTP_200_OK)
+
+class SendDateMessage(AsyncWebsocketConsumer):
+    async def connect(self):
+        await self.channel_layer.group_add("chat", self.channel_name)
+        await self.accept()
+
+    async def disconnect(self, close_code):
+        await self.channel_layer.group_discard("chat", self.channel_name)
+
+    async def send_new_message(self, event):
+        event=event['message']
+        await self.send(text_data=json.dumps({'message': event['message'],'from1':event['from1'],'to1':event['to1'],'avatar_url':event['avatar_url'],'time1': event['time1'],'name':event['name'],'chatid':event['chatId']}))
+
+
+
+
+
+
+
+
+
+
+
+
 
 

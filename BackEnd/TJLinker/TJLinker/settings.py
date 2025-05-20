@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -43,7 +44,21 @@ INSTALLED_APPS = [
     "lists",
     "corsheaders",
     "rest_framework",
+    'channels',
+    'django_extensions',
 ]
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",  # 简单版本，开发测试用
+        # 推荐生产环境用 Redis：
+        # "BACKEND": "channels_redis.core.RedisChannelLayer",
+        # "CONFIG": {"hosts": [("127.0.0.1", 6379)]},
+    },
+}
+
+# 指定使用 channels 作为 ASGI 应用入口
+ASGI_APPLICATION = 'TJLinker.asgi.application'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -88,7 +103,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tjlinker',  # 你的数据库名称
         'USER': 'root',  # 你的数据库用户名
-        'PASSWORD': '123456',  # 你的数据库密码
+        'PASSWORD': '204519',  # 你的数据库密码
         'HOST': 'localhost',  # 数据库主机地址
         'PORT': '3306',  # 数据库端口
     }

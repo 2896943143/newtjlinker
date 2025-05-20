@@ -42,7 +42,6 @@ class Activity(models.Model):
     NumLimit = models.IntegerField(null=True, blank=True)
     RoomID = models.ForeignKey('ChatMessage', on_delete=models.CASCADE, null=True, blank=True, related_name='activities')  # 修改为外键
     ParticipantsID = models.CharField(max_length=255, null=True, blank=True)
-    PosterUrl = models.CharField(max_length=255, null=True, blank=True)  # 新增海报URL字段
 
     def save(self, *args, **kwargs):
         # if not self.RoomID:

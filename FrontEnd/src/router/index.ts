@@ -46,6 +46,11 @@ const routes: Array<RouteRecordRaw> = [
     meta: {title: 'TJLinker - DetailActivity'}
   },
   {
+    path: '/new-chat',
+    component: () => import('@/pages/NewChat.vue'),
+    meta: {title: 'TJLinker - Chat'}
+  },
+  {
     path: '/detail-activity-manager',
     component: () => import('@/pages/DetailActivityManager.vue'),
     meta: {title: 'TJLinker - DetailActivityManager'}
@@ -97,7 +102,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/pages/Welcome.vue'),
     meta: {title: 'TJLinker - Welcome'}
   },
-  
+
   {
     path: '/edituserinfo',
     component: () => import('@/pages/EditUserInfo.vue'),
@@ -108,7 +113,7 @@ const routes: Array<RouteRecordRaw> = [
 
 
 
-  
+
 ]
 
 const router: Router = createRouter({
